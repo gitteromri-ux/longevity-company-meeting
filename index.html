@@ -1,0 +1,295 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Longevity Life Academy · Company Meeting</title>
+<link rel="preload" href="fonts/PlayfairDisplay-Italic.ttf" as="font" crossorigin><link rel="preload" href="fonts/PlayfairDisplay.ttf" as="font" crossorigin><link rel="preload" href="fonts/Inter.ttf" as="font" crossorigin>
+<style>
+@font-face{font-family:'Playfair Display';src:url(fonts/PlayfairDisplay-Italic.ttf);font-style:italic;font-weight:400 900}
+@font-face{font-family:'Playfair Display';src:url(fonts/PlayfairDisplay.ttf);font-style:normal;font-weight:400 900}
+@font-face{font-family:'Inter';src:url(fonts/Inter.ttf);font-weight:100 900}
+:root{--cy:#7DE5FF;--sky:#9CC8FF;--gold:#F6DC8C;--ink:#C8D3E3;--mute:#9FB3D1;--dim:#6F86A8;
+--teal:#3FD8C2;--blue:#5B9BFF;--violet:#9D8CFF;--pink:#E08BE6;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#01060F;overflow:hidden;color:#fff;font-family:var(--sans)}
+body{position:fixed;inset:0;margin:0}#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.slide{position:absolute;inset:0;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s .7s;background:linear-gradient(165deg,#030d1a 0%,#001233 50%,#001a3d 100%)}
+.slide.on{opacity:1;visibility:visible;transition:opacity .7s ease}
+.glow{position:absolute;border-radius:50%;pointer-events:none}
+.g1{left:-260px;top:-420px;width:1500px;height:1500px;background:radial-gradient(ellipse at center,rgba(125,229,255,.34) 0%,rgba(125,229,255,.12) 30%,rgba(125,229,255,0) 66%)}
+.g2{right:-300px;bottom:-500px;width:1400px;height:1400px;background:radial-gradient(ellipse at center,rgba(91,155,255,.30) 0%,rgba(91,155,255,.10) 32%,rgba(91,155,255,0) 66%)}
+.g3{left:-200px;top:-460px;width:1000px;height:1000px;background:radial-gradient(ellipse at center,rgba(246,220,140,.16) 0%,rgba(246,220,140,0) 66%)}
+.kick{position:absolute;left:96px;top:66px;display:flex;align-items:center;gap:16px;font:500 22px/1 var(--sans);letter-spacing:5px;text-transform:uppercase;color:#B8C7E0}
+.kick i{width:14px;height:14px;border-radius:50%;background:var(--cy);box-shadow:0 0 16px 4px rgba(125,229,255,.55)}
+.kick b{color:var(--cy);font-weight:500}
+h2{position:absolute;left:92px;top:104px;font:400 96px/1.04 var(--serif);letter-spacing:-1.5px;color:#fff;text-shadow:0 0 48px rgba(125,229,255,.28);white-space:nowrap}
+h2 em{font-style:italic;color:var(--sky)}
+.lede{position:absolute;left:96px;top:222px;font:italic 400 38px/1.3 var(--serif);color:var(--ink)}
+.logo{position:absolute;right:84px;top:52px;width:228px;opacity:.95}
+.big h2{top:80px;font-size:66px;letter-spacing:-.8px}.big .kick{top:44px}
+.pg .dots{margin-left:14px;letter-spacing:4px;color:var(--cy)}
+.ev .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.8)}
+.ev .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,13,26,.92) 0%,rgba(3,13,26,.55) 45%,rgba(3,13,26,.25) 70%,rgba(3,13,26,.75) 100%),linear-gradient(0deg,rgba(3,13,26,.95) 0%,rgba(3,13,26,0) 40%)}
+.live{position:absolute;left:96px;top:118px;display:flex;align-items:center;gap:12px;padding:10px 20px;border-radius:12px;background:#E5334B;font:700 26px var(--sans);letter-spacing:4px;color:#fff;box-shadow:0 0 40px rgba(229,51,75,.6)}
+.live span{width:14px;height:14px;border-radius:50%;background:#fff;animation:blink 1.2s infinite}@keyframes blink{50%{opacity:.2}}
+.evh{position:absolute;left:96px;top:210px}.evh .num{color:#F6DC8C;text-shadow:0 0 80px rgba(246,220,140,.45)}
+.evt{font:400 64px/1.08 var(--serif);color:#fff;margin-top:10px}.evt em{color:#9CC8FF}.evs{font:400 30px var(--sans);color:#C8D3E3;margin-top:18px}
+.wall{position:absolute;right:96px;top:200px;width:700px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.wall i{aspect-ratio:16/10;border-radius:12px;box-shadow:0 0 0 1px rgba(125,229,255,.25) inset;backdrop-filter:blur(6px);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 2px rgba(125,229,255,.7) inset,0 0 24px rgba(125,229,255,.35)}}
+.wallcap{position:absolute;right:96px;top:668px;width:700px;text-align:right;font:italic 400 28px var(--serif);color:#C8D3E3}
+.tlx{position:absolute;left:96px;right:96px;top:790px;display:flex;gap:16px;height:150px}
+.tlx .seg{border-radius:22px;padding:22px 30px;display:flex;flex-direction:column;gap:6px;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset}
+.tlx .a{flex:2;background:linear-gradient(90deg,rgba(91,155,255,.55),rgba(125,229,255,.3))}.tlx .g{flex:1;background:linear-gradient(90deg,rgba(246,220,140,.55),rgba(246,220,140,.25))}
+.tlx b{font:500 22px var(--sans);letter-spacing:4px;color:#fff}.tlx span{font:400 44px/1 var(--serif);color:#fff}.tlx em{font:italic 400 26px var(--serif);color:#E8EEF8}
+.pg{position:absolute;right:92px;bottom:40px;font:400 20px var(--sans);letter-spacing:3px;color:var(--dim)}
+.src{position:absolute;left:96px;bottom:40px;font:300 17px/1.35 var(--sans);color:#6F86A8;max-width:1500px}
+/* Julie cards */
+.card{position:absolute;border-radius:28px;padding:44px 30px 26px;border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.card:before{content:"";position:absolute;left:30px;right:30px;top:22px;height:8px;border-radius:8px;background:var(--bar)}
+.card .n{font:500 24px/1 var(--sans);letter-spacing:4px;color:var(--c)}
+.card .t{font:400 46px/1.08 var(--serif);color:#fff;margin-top:14px}
+.card .m{position:relative;height:200px;margin:2px -8px 22px;border-radius:16px;overflow:hidden;background:#0b1422;box-shadow:0 0 0 1px rgba(255,255,255,.12)}.card .m video,.card .m img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card.ov .m{height:536px;margin:0 0 12px;border-radius:18px}.card.ov .n{margin-left:10px}.card.ov .n{display:inline-block;font-size:20px;margin-right:12px}.card.ov{white-space:nowrap}.card.ov .t{display:block;font-size:40px;line-height:1;margin:4px 0 0 8px;white-space:nowrap}.card.ov:before{left:22px;right:22px;top:18px;height:7px}
+.card .s{font:italic 400 28px/1.3 var(--serif);color:var(--ink);margin-top:12px}
+.c-teal{--c:#7FF0DD;--bar:linear-gradient(90deg,#3FD8C2,#7DE5FF);background:linear-gradient(180deg,rgba(63,216,194,.26),rgba(20,60,80,.30))}
+.c-blue{--c:#8FBFFF;--bar:linear-gradient(90deg,#4C8DFF,#9CC8FF);background:linear-gradient(180deg,rgba(76,141,255,.28),rgba(20,40,90,.30))}
+.c-violet{--c:#C4B6FF;--bar:linear-gradient(90deg,#8B7CFF,#C4B6FF);background:linear-gradient(180deg,rgba(139,124,255,.28),rgba(40,30,90,.30))}
+.c-pink{--c:#F3B3F3;--bar:linear-gradient(90deg,#D77FE0,#F3B3F3);background:linear-gradient(180deg,rgba(215,127,224,.26),rgba(70,30,80,.30))}
+.c-gold{--c:#F6DC8C;--bar:linear-gradient(90deg,#E9BE5A,#F6DC8C);background:linear-gradient(180deg,rgba(246,220,140,.22),rgba(70,55,25,.28))}
+/* big numbers */
+.num{font:italic 400 190px/.9 var(--serif);color:var(--gold);text-shadow:0 0 60px rgba(246,220,140,.25)}
+/* devices */
+.lap{position:absolute}
+.lap .lid{position:relative;border-radius:20px;padding:14px 14px 18px;background:linear-gradient(180deg,#1b212b,#0a0d13);box-shadow:0 0 0 1.5px rgba(255,255,255,.10) inset,0 40px 90px rgba(0,0,0,.6),0 0 120px rgba(91,155,255,.18)}
+.lap .lid:after{content:"";position:absolute;left:50%;top:5px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#2a3240}
+.lap .scr{position:relative;aspect-ratio:16/9;border-radius:7px;overflow:hidden;background:#0b1422}
+.lap .scr:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.07),rgba(255,255,255,0) 38%);pointer-events:none}
+.lap .base{position:relative;height:18px;margin:0 -5.5%;border-radius:2px 2px 20px 20px;background:linear-gradient(180deg,#d9dee6 0%,#aab3c0 55%,#7d8796 100%);box-shadow:0 18px 30px rgba(0,0,0,.45)}
+.lap .base:before{content:"";position:absolute;left:50%;top:0;width:16%;height:7px;margin-left:-8%;border-radius:0 0 10px 10px;background:linear-gradient(#9aa4b2,#c3cad4)}
+.chip{position:absolute;left:16px;top:16px;z-index:3;padding:10px 16px 10px 14px;border-radius:14px;background:rgba(3,13,26,.86);box-shadow:0 0 0 1px rgba(125,229,255,.35) inset,0 10px 30px rgba(0,0,0,.4);font:400 30px/1 var(--serif);color:#fff;display:flex;gap:10px;align-items:center}.chip i{font:500 15px var(--sans);letter-spacing:3px;color:var(--cy);font-style:normal}
+.lab{position:absolute;left:0;right:0;font:400 22px/1.3 var(--sans);color:var(--mute);text-align:center;margin-top:22px}
+.lab b{display:block;font:400 32px/1.15 var(--serif);color:#fff;margin-bottom:4px}
+.ph{position:absolute;border-radius:46px;padding:10px;background:linear-gradient(160deg,#2a313c,#0a0d13 40%);box-shadow:0 0 0 1.5px rgba(255,255,255,.12) inset,0 40px 80px rgba(0,0,0,.6),0 0 90px rgba(125,229,255,.12)}
+.ph .scr{position:relative;width:100%;height:100%;border-radius:37px;overflow:hidden;background:#000}
+.ph .isl{position:absolute;left:50%;top:12px;width:30%;height:22px;margin-left:-15%;border-radius:14px;background:#000;z-index:4}
+video{display:block;width:100%;height:100%;object-fit:cover;background:#0b1422}
+.snd{position:absolute;right:14px;bottom:14px;z-index:6;border:0;border-radius:999px;padding:9px 15px;font:600 15px var(--sans);letter-spacing:.5px;background:rgba(3,13,26,.72);color:#fff;backdrop-filter:blur(8px);box-shadow:0 0 0 1px rgba(255,255,255,.25) inset;cursor:pointer}
+.snd.on{background:var(--cy);color:#001233}
+/* hook caption card */
+.hk{position:absolute;left:16px;right:16px;top:50%;transform:translateY(-50%);border-radius:24px;padding:38px 22px 24px;text-align:left;z-index:5;transition:all .9s cubic-bezier(.2,.8,.2,1)}
+.hk.card{position:absolute}
+.hk .t{font-size:40px}
+.hk{background:linear-gradient(180deg,rgba(8,26,58,.96),rgba(4,14,34,.96))!important;backdrop-filter:none}
+.hk.min{opacity:0;transform:translateY(-30%) scale(.92)}
+/* tiles */
+.tile{position:absolute;border-radius:26px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 30px 70px rgba(0,0,0,.5)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(3,13,26,.92));font:400 26px var(--serif);color:#fff}
+.tile .cap small{display:block;font:500 14px var(--sans);letter-spacing:3px;color:var(--cy);margin-bottom:4px}
+/* email phones */
+.em{position:absolute;inset:0;overflow:hidden;background:#f2efe8}
+.em img{position:absolute;left:0;top:0;width:100%;animation:esc var(--d,20s) ease-in-out infinite alternate}
+@keyframes esc{0%,10%{transform:translateY(0)}100%{transform:translateY(var(--y))}}
+.flow{position:absolute;left:96px;top:300px;width:700px}
+.step{position:relative;height:118px;margin-bottom:22px;border-radius:24px;padding:30px 28px 0 112px;border:1px solid rgba(255,255,255,.12)}
+.step:before{content:"";position:absolute;left:24px;top:22px;bottom:22px;width:8px;border-radius:8px;background:var(--bar)}
+.step .k{position:absolute;left:46px;top:30px;font:500 24px var(--sans);letter-spacing:3px;color:var(--c)}
+.step .t{font:400 36px/1.05 var(--serif);color:#fff}
+.step .s{font:italic 400 26px var(--serif);color:var(--ink);margin-top:6px}
+.step .c{position:absolute;right:26px;top:24px;font:italic 400 60px/1 var(--serif);color:var(--c)}
+.step:not(:last-child):after{content:"";position:absolute;left:52px;bottom:-20px;width:2px;height:18px;background:rgba(125,229,255,.5)}
+.tl{position:absolute;left:96px;top:520px;width:1728px;height:3px;background:linear-gradient(90deg,#3FD8C2,#5B9BFF,#9D8CFF,#E08BE6)}
+.dot{position:absolute;width:30px;height:30px;border-radius:50%;margin:-14px 0 0 -15px;background:#fff;box-shadow:0 0 0 7px rgba(125,229,255,.25),0 0 30px 8px rgba(125,229,255,.5)}
+.nav{position:fixed;right:16px;bottom:12px;z-index:99;display:flex;gap:8px;opacity:0;transition:opacity .3s}
+body:hover .nav{opacity:.85}
+.nav button{font:600 14px var(--sans);padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(3,13,26,.7);color:#fff;cursor:pointer}
+.fade-in>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.slide,.slide.on{transition:none!important}.fade-in>*{animation:none!important}.wall i{animation:none!important}.live span{animation:none!important}
+</style></head><body><div id="stage">
+
+<!-- 1 OVERVIEW -->
+<section class="slide"><div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+<div class="kick"><i></i><b>01</b> • Longevity Life Academy · Company meeting</div>
+<h2>What we built <em>in Longevity.</em></h2>
+<div class="lede">Five pieces that work as one system.</div>
+<img class="logo" src="img/logo-dark.png" alt="Longevity Life Academy by eTeacher Group">
+<div class="card ov c-teal" style="left:96px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/wine.mp4" poster="v/wine.jpg" muted loop playsinline></video></div><div class="t">212 paid orders</div></div>
+<div class="card ov c-blue" style="left:446px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video></div><div class="t">$79 to start</div></div>
+<div class="card ov c-violet" style="left:796px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/lla_pages.mp4" poster="v/lla_pages.jpg" muted loop playsinline></video></div><div class="t">5 web pages</div></div>
+<div class="card ov c-pink" style="left:1146px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><img src="em/jm-u1.jpg" alt=""></div><div class="t">37 emails</div></div>
+<div class="card ov c-gold" style="left:1496px;top:300px;width:328px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="r/w46_11.mp4" poster="r/w46_11.jpg" muted loop playsinline></video></div><div class="t">22 new videos</div></div>
+<div class="pg">01 / 09</div></section>
+
+<!-- 2 MASTERCLASS -->
+<section class="slide ev"><video class="bgv" data-src="v/cake.mp4" poster="v/cake.jpg" style="filter:blur(22px) brightness(.62) saturate(1.2);transform:scale(1.15)" muted loop playsinline></video><div class="shade"></div>
+<div class="kick"><i></i><b>01</b> • The Masterclass · live on Zoom</div>
+<div class="live"><span></span>LIVE</div>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="evh"><div class="num" style="font-size:230px;line-height:.9">212</div><div class="evt">paid orders,<br><em>16 Sep – 2 Nov.</em></div><div class="evs">$49 standard · $79 VIP</div></div>
+<div class="wall"><i style="animation-delay:0.00s;background:linear-gradient(0deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.37s;background:linear-gradient(47deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.74s;background:linear-gradient(94deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.11s;background:linear-gradient(141deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.48s;background:linear-gradient(188deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.85s;background:linear-gradient(235deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.22s;background:linear-gradient(282deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.59s;background:linear-gradient(329deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.96s;background:linear-gradient(16deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.33s;background:linear-gradient(63deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.70s;background:linear-gradient(110deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.07s;background:linear-gradient(157deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.44s;background:linear-gradient(204deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.81s;background:linear-gradient(251deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.18s;background:linear-gradient(298deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.55s;background:linear-gradient(345deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:2.92s;background:linear-gradient(32deg,rgba(125,229,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.29s;background:linear-gradient(79deg,rgba(91,155,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:0.66s;background:linear-gradient(126deg,rgba(246,220,255,.32),rgba(3,13,26,.9))"></i><i style="animation-delay:1.03s;background:linear-gradient(173deg,rgba(180,140,255,.32),rgba(3,13,26,.9))"></i></div><div class="wallcap">One live class, on Zoom</div>
+<div class="tlx"><div class="seg a"><b>7:00 PM ET</b><span>The Masterclass</span><em>60 min</em></div><div class="seg g"><b>8:00 PM ET</b><span>VIP Q&amp;A</span><em>30 min</em></div></div>
+<div class="src" style="color:#B8C7E0">ActiveCampaign, paid deals for product “Longevity Masterclass”, 16 Sep – 2 Nov 2026 (pulled 4 Nov, 23:15 Israel time) · Courtney Run of Show V3. Tiles are abstract, not attendees.</div>
+<div class="pg"></div></section>
+
+<!-- 3 HOOKS -->
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>02</b> • The Masterclass · Julie's hooks</div>
+<h2>Julie's best moments, <em>cut for social.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div id="hooks"></div>
+<div class="src">Julie's Riverside recordings, cut as 9:16 clips. Source: lla-blueprint-nov-adjusted, final/clips.json and preview/clips.</div>
+<div class="pg">03 / 09</div></section>
+
+<!-- 4 NOVEMBER PROMO -->
+<section class="slide"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>03</b> • November e-commerce promo</div>
+<h2>$79 starts the Blueprint, <em>online.</em></h2>
+<div class="lede">Pick a plan, pay online, start in November.</div>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="lap" style="left:120px;top:318px;width:1060px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site · pricing and checkout</div></div></div><div class="base"></div></div>
+<div class="lap" style="left:1290px;top:318px;width:534px"><div class="lid"><div class="scr"><video data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip" style="font-size:19px;top:10px;left:10px;padding:7px 11px"><i>02</i>Event offer page</div></div></div><div class="base"></div></div>
+<div class="card c-blue" style="left:1270px;top:700px;width:574px;min-height:200px;padding-top:44px"><div class="n">THE NOVEMBER OFFER</div><div class="t" style="font-size:44px">$79 for month one</div><div class="s">then $169 × 4 · VIP Masterclass Nov 14 included · 14-day full refund</div></div>
+<div class="src">01 longevitylifeacademy.pages.dev · 02 shared live in the masterclass chat (/blueprint-attendees-7q4x). Prices from the live offer section, 4 Nov 2026. Screen recording; nothing submitted.</div>
+<div class="pg">04 / 09</div></section>
+
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>03</b> • November e-commerce promo</div>
+<h2>Pick a plan, <em>pay online.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site · pricing and checkout</div></div></div><div class="base"></div></div>
+<div class="src">longevitylifeacademy.pages.dev, pricing and enroll step 1. Screen recording 4 Nov 2026; nothing submitted.</div>
+<div class="pg"></div></section>
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>03</b> • November e-commerce promo</div>
+<h2>The offer, <em>shared live with attendees.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip"><i>02</i>Event offer page</div></div></div><div class="base"></div></div>
+<div class="src">/blueprint-attendees-7q4x, shared in the masterclass chat. Screen recording 4 Nov 2026.</div>
+<div class="pg"></div></section>
+
+<div id="sites" hidden></div>
+
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>04</b> • The sites</div>
+<h2>The academy <em>home page.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/lla_beauty.mp4" poster="v/lla_beauty.jpg" muted loop playsinline></video><div class="chip"><i>01</i>longevitylifeacademy.com</div></div></div><div class="base"></div></div>
+<div class="src">longevitylifeacademy.com home page. Screen recording 4 Nov 2026.</div>
+<div class="pg"></div></section>
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>04</b> • The sites</div>
+<h2>The Masterclass <em>site.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>02</i>The Masterclass site</div></div></div><div class="base"></div></div>
+<div class="src">/julie-masterclass. Screen recording 4 Nov 2026.</div>
+<div class="pg"></div></section>
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>04</b> • The sites</div>
+<h2>The 72-hour <em>offer.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/masterclass72.mp4" poster="v/masterclass72.jpg" muted loop playsinline></video><div class="chip"><i>03</i>The 72-hour offer</div></div></div><div class="base"></div></div>
+<div class="src">/masterclass-72hours, linked from the invite emails. Countdown shows 00:00:00 because the offer has ended. Screen recording 4 Nov 2026.</div>
+<div class="pg"></div></section>
+
+<!-- 6 EMAIL ENGINE -->
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>05</b> • The email engine</div>
+<h2>37 emails, <em>one for every step.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="flow" style="top:270px">
+<div class="step c-teal"><div class="k">01</div><div class="t">Invite</div><div class="s">IIBS, Rosen and LLA lists, by segment</div><div class="c">16</div></div>
+<div class="step c-blue"><div class="k">02</div><div class="t">Left the checkout</div><div class="s">details, date or payment: three tracks</div><div class="c">9</div></div>
+<div class="step c-violet"><div class="k">03</div><div class="t">Paid</div><div class="s">confirmation to “starting in two hours”</div><div class="c">4</div></div>
+<div class="step c-pink"><div class="k">04</div><div class="t">Attended</div><div class="s">a $200 credit toward the Blueprint</div><div class="c">4</div></div>
+<div class="step c-gold"><div class="k">05</div><div class="t">Missed it</div><div class="s">the seat moves to the next date</div><div class="c">4</div></div>
+</div>
+<div id="mails"></div><div class="ph" style="left:900px;top:180px;width:380px;height:810px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/lla-leads-01.jpg" loading="lazy" style="--y:-802px;--d:22s" alt=""></div></div></div><div class="ph" style="left:1340px;top:180px;width:380px;height:810px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/iibs-alumni-01.jpg" loading="lazy" style="--y:-1051px;--d:26s" alt=""></div></div></div>
+<div class="src">Sources: GitHub gitteromri-ux/julie-masterclass-blast (16 invites) and gitteromri-ux/lla-masterclass-emails (5 funnels, 21 emails), handed to Chris for ActiveCampaign.</div>
+<div class="pg">06 / 09</div></section>
+
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>05</b> • The email engine</div>
+<h2>Invite, <em>then a nudge at checkout.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="ph" style="left:530px;top:180px;width:380px;height:810px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/iibs-leads-01.jpg" loading="lazy" style="--y:-1074px;--d:20s" alt=""></div></div></div><div class="chip" style="position:absolute;left:110px;top:560px;font-size:28px;padding:14px 20px"><i>01</i>Invite</div><div class="ph" style="left:1010px;top:180px;width:380px;height:810px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/jm-a3-1.jpg" loading="lazy" style="--y:-437px;--d:24s" alt=""></div></div></div><div class="chip" style="position:absolute;left:1460px;top:560px;font-size:28px;padding:14px 20px"><i>02</i>Left the checkout</div>
+<div class="src">Real emails from gitteromri-ux/julie-masterclass-blast and gitteromri-ux/lla-masterclass-emails.</div>
+<div class="pg"></div></section>
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>05</b> • The email engine</div>
+<h2>Paid, <em>then attended.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="ph" style="left:530px;top:180px;width:380px;height:810px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/jm-b1.jpg" loading="lazy" style="--y:-445px;--d:20s" alt=""></div></div></div><div class="chip" style="position:absolute;left:110px;top:560px;font-size:28px;padding:14px 20px"><i>03</i>Paid</div><div class="ph" style="left:1010px;top:180px;width:380px;height:810px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/jm-u1.jpg" loading="lazy" style="--y:-420px;--d:24s" alt=""></div></div></div><div class="chip" style="position:absolute;left:1460px;top:560px;font-size:28px;padding:14px 20px"><i>04</i>Attended</div>
+<div class="src">Real emails from gitteromri-ux/julie-masterclass-blast and gitteromri-ux/lla-masterclass-emails.</div>
+<div class="pg"></div></section>
+
+<!-- 7 REELS -->
+<section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>06</b> • New creative</div>
+<h2>22 new videos, <em>made for November.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div id="reels"></div>
+<div class="src">22 final video files in lla-blueprint-nov-adjusted final/clips.json. Original music: tap Sound.</div>
+<div class="pg">07 / 09</div></section>
+
+<!-- 8 FEED -->
+<section class="slide"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="kick"><i></i><b>06</b> • New creative</div>
+<h2>Every story, <em>in every format.</em></h2>
+<div class="lede">The same ads in 9:16, 4:5 and 1:1.</div>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div id="feed"></div>
+<div class="src">Source: final/clips.json (status FINAL).</div>
+<div class="pg">08 / 09</div></section>
+
+<!-- 9 WHAT'S NEXT -->
+<section class="slide"><div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+<div class="kick"><i></i><b>07</b> • What's next</div>
+<h2>November, <em>step by step.</em></h2>
+<img class="logo" src="img/logo-dark.png" alt="">
+<div class="tl"></div>
+<div class="dot" style="left:300px;top:521px"></div><div class="dot" style="left:960px;top:521px"></div><div class="dot" style="left:1620px;top:521px"></div>
+<div style="position:absolute;left:100px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Now</div>
+<div style="position:absolute;left:760px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Nov 14</div>
+<div style="position:absolute;left:1420px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Nov 23 · 25</div>
+<div class="card c-blue" style="left:90px;top:610px;width:420px;min-height:250px"><div class="n">THE PROMO</div><div class="t">November offer is live</div><div class="s">$79 for month one, online checkout</div></div>
+<div class="card c-teal" style="left:750px;top:610px;width:420px;min-height:250px"><div class="n">LIVE ON ZOOM</div><div class="t">Julie's VIP Masterclass</div><div class="s">12:00 PM ET, included in the course</div></div>
+<div class="card c-violet" style="left:1410px;top:610px;width:420px;min-height:250px"><div class="n">CLASSES BEGIN</div><div class="t">The November class</div><div class="s">Monday Nov 23 or Wednesday Nov 25</div></div>
+<div class="src">Source: live offer section, longevitylifeacademy.pages.dev, 4 Nov 2026.</div>
+<div class="pg">09 / 09</div></section>
+</div>
+<div class="nav"><button onclick="go(-1)">◀</button><button onclick="go(1)">▶</button><button onclick="document.documentElement.requestFullscreen()">Full screen</button></div>
+<script>
+
+const $=id=>document.getElementById(id);
+const phone=(x,y,w,h,src,inner='',poster='')=>`<div class="ph" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><video data-src="${src}" ${poster?`poster="${poster}"`:''} muted loop playsinline></video>${inner}<button class="snd">Sound</button></div></div>`;
+const lap=(x,y,w,src,poster,title,sub)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>${title}</b>${sub}</div></div>`;
+// hooks
+const hooks=[['cake','Longevity is like a cake.','c-teal'],['sugar','Sugar cravings aren’t willpower.','c-pink'],['wine','Your wine is making hot flashes worse.','c-violet'],['aging','Age 6.5 years in 10?','c-blue'],['hrv','Heart-rate variability','c-gold'],['fasting','Fasting','c-teal']];
+$('hooks').innerHTML=hooks.slice(0,3).map((h,i)=>phone(330+i*440,205,380,822,'v/'+h[0]+'.mp4',`<div class="hk card ${h[2]}"><div class="n">0${i+1}</div><div class="t">${h[1]}</div></div>`,'v/'+h[0]+'.jpg')).join('');
+// sites 2x2
+const lapc=(x,y,w,src,poster,n,t,sm)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video><div class="chip" ${sm?'style="font-size:19px;top:10px;left:10px;padding:7px 11px"':''}><i>${n}</i>${t}</div></div></div><div class="base"></div></div>`;
+$('sites').innerHTML=[lapc(120,300,1060,'v/lla_beauty.mp4','v/lla_beauty.jpg','01','longevitylifeacademy.com'),lapc(1290,290,534,'v/masterclass.mp4','v/masterclass.jpg','02','The Masterclass site',1),lapc(1290,660,534,'v/masterclass72.mp4','v/masterclass72.jpg','03','The 72-hour offer',1)].join('');
+// mails
+const mails0=[['iibs-leads-01','Invite',3139],['jm-a3-1','Left the checkout',2066],['jm-b1','Paid',2080],['jm-u1','Attended',2038]];
+const mails=[];$('mails').innerHTML=mails.map((m,i)=>{const w=236,h=500,ih=Math.round(m[2]*w/640);return `<div class="ph" style="left:${880+i*258}px;top:${300+(i%2)*60}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/${m[0]}.jpg" loading="lazy" style="--y:${-(ih-(h-20))}px;--d:${16+i*3}s" alt=""></div></div></div><div style="position:absolute;left:${880+i*258}px;top:${300+(i%2)*60+h+16}px;width:${w}px;text-align:center;font:400 26px var(--serif);color:#fff">${m[1]}</div>`}).join('');
+// reels
+const reels=[['r/ad26_916','Live on Zoom'],['r/ad27_916','The event'],['r/ad17_916','The VIP seat']];
+$('reels').innerHTML=reels.map((r,i)=>phone(330+i*440,205,380,822,r[0]+'.mp4','',r[0]+'.jpg')).join('');
+// feed
+const feed=[['r/ad26_45','4:5','Live on Zoom',408,510],['r/ad25_11','1:1','Masterclass card',440,440],['r/w46_11','1:1','Her story, 46',440,440],['r/ad27_45','4:5','The event',408,510]];
+let fx=96+(1728-(408*2+440*2+48*3))/2;$('feed').innerHTML=feed.map(f=>{const y=330+(510-f[4])/2;const s=`<div class="tile" style="left:${fx}px;top:${y}px;width:${f[3]}px;height:${f[4]}px"><video data-src="${f[0]}.mp4" poster="${f[0]}.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="cap"><small>${f[1]}</small>${f[2]}</div></div>`;fx+=f[3]+48;return s}).join('');
+// deck slideshow
+
+// sound
+document.addEventListener('click',e=>{const b=e.target.closest('.snd');if(!b)return;e.stopPropagation();const v=b.parentNode.querySelector('video');document.querySelectorAll('video').forEach(o=>{if(o!==v){o.muted=true}});document.querySelectorAll('.snd').forEach(o=>{if(o!==b){o.classList.remove('on');o.textContent='Sound'}});v.muted=!v.muted;b.classList.toggle('on',!v.muted);b.textContent=v.muted?'Sound':'Sound on';v.play()});
+// slides
+const S=[...document.querySelectorAll('.slide')];const G=[0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];const NG=5;
+S.forEach((x,i)=>{const g=G[i],ps=S.map((_,k)=>k).filter(k=>G[k]===g),pi=ps.indexOf(i);const p=x.querySelector('.pg');if(p)p.innerHTML=String(g+1).padStart(2,'0')+' / 05 <span class="dots">'+ps.map((_,k)=>k===pi?'●':'○').join(' ')+'</span>';const kb=x.querySelector('.kick b');if(kb)kb.textContent=String(g+1).padStart(2,'0')});
+let tmr=null;function auto(){return;clearTimeout(tmr);const g=G[cur],ps=S.map((_,k)=>k).filter(k=>G[k]===g);if(ps.length<2)return;const d=S[cur].classList.contains('big')?22000:14000;tmr=setTimeout(()=>{const n=ps[(ps.indexOf(cur)+1)%ps.length];cur=n;act(cur)},d)}
+let cur=0;
+function act(i){S.forEach((s,j)=>{const on=j===i;s.classList.toggle('on',on);s.querySelectorAll('video').forEach(v=>{if(on||j===i+1){if(!v.getAttribute('src'))v.src=v.dataset.src}if(on){v.currentTime=0;v.play().catch(()=>{})}else{v.pause();v.muted=true}});if(on)s.querySelectorAll('.snd').forEach(b=>{b.classList.remove('on');b.textContent='Sound'})});history.replaceState(null,'','#'+(i+1));setTimeout(auto,0)}
+function go(d){cur=Math.max(0,Math.min(S.length-1,cur+d));act(cur)}
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(1)}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(-1)}});
+document.addEventListener('click',e=>{if(e.target.closest('button'))return;if(e.clientX>innerWidth*0.6)go(1);else if(e.clientX<innerWidth*0.15)go(-1)});
+function fit(){const W=document.documentElement.clientWidth,H=document.documentElement.clientHeight,s=Math.min(W/1920,H/1080);$('stage').style.transform=`translate(${(W-1920*s)/2}px,${(H-1080*s)/2}px) scale(${s})`}addEventListener('resize',fit);fit();
+setInterval(()=>{document.querySelectorAll('.slide.on .hk').forEach(c=>{const v=c.parentNode.querySelector('video');c.classList.toggle('min',v.currentTime>3.5)})},200);
+cur=Math.max(0,Math.min(S.length-1,(parseInt(location.hash.slice(1))||1)-1));act(cur);
+</script></body></html>
