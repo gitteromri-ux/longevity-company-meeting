@@ -13,8 +13,8 @@ body{position:fixed;inset:0;margin:0}#stage{position:absolute;left:0;top:0;width
 .slide{position:absolute;inset:0;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s .7s;background:linear-gradient(165deg,#030d1a 0%,#001233 50%,#001a3d 100%)}
 .slide.on{opacity:1;visibility:visible;transition:opacity .7s ease}
 .glow{position:absolute;border-radius:50%;pointer-events:none}
-.g1{left:-260px;top:-420px;width:1500px;height:1500px;background:radial-gradient(ellipse at center,rgba(125,229,255,.34) 0%,rgba(125,229,255,.12) 30%,rgba(125,229,255,0) 66%)}
-.g2{right:-300px;bottom:-500px;width:1400px;height:1400px;background:radial-gradient(ellipse at center,rgba(91,155,255,.30) 0%,rgba(91,155,255,.10) 32%,rgba(91,155,255,0) 66%)}
+.g1{left:-260px;top:-420px;width:1500px;height:1500px;background:radial-gradient(ellipse at center,rgba(125,229,255,.16) 0%,rgba(125,229,255,.06) 30%,rgba(125,229,255,0) 66%)}
+.g2{right:-300px;bottom:-500px;width:1400px;height:1400px;background:radial-gradient(ellipse at center,rgba(91,155,255,.14) 0%,rgba(91,155,255,.05) 32%,rgba(91,155,255,0) 66%)}
 .g3{left:-200px;top:-460px;width:1000px;height:1000px;background:radial-gradient(ellipse at center,rgba(246,220,140,.16) 0%,rgba(246,220,140,0) 66%)}
 .kick{position:absolute;left:96px;top:66px;display:flex;align-items:center;gap:16px;font:500 22px/1 var(--sans);letter-spacing:5px;text-transform:uppercase;color:#B8C7E0}
 .kick i{width:14px;height:14px;border-radius:50%;background:var(--cy);box-shadow:0 0 16px 4px rgba(125,229,255,.55)}
@@ -125,6 +125,7 @@ body:hover .nav{opacity:.85}
 #rev textarea{border-radius:16px!important;border:1px solid rgba(125,229,255,.25)!important;background:rgba(3,13,26,.7)!important;font:400 19px/1.5 var(--sans)!important}
 #rev label.fin{font:italic 400 26px var(--serif)!important;color:#F6DC8C!important}#rev label.fin input{accent-color:#F6DC8C}
 #rev .meta span{font:italic 400 18px var(--serif);color:#9CC8FF}
+.g3{display:none}.src{opacity:.75}
 </style><script>window.__h=location.hash</script></head><body><div id="stage">
 
 <!-- 1 OVERVIEW -->
@@ -166,7 +167,7 @@ body:hover .nav{opacity:.85}
 <div class="kick"><i></i><b>03</b>November e-commerce promo</div>
 <h2>$79 starts the Blueprint, <em>online.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="lap" style="left:96px;top:200px;width:1260px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site, pricing and checkout</div></div></div><div class="base"></div></div>
+<div class="lap" style="left:96px;top:188px;width:1260px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site, pricing and checkout</div></div></div><div class="base"></div></div>
 <div class="card c-blue" style="left:1396px;top:300px;width:428px;padding-top:48px"><div class="n">THE NOVEMBER OFFER</div><div class="t" style="font-size:44px">$79 for month one</div><div class="s">then $169 a month for 4 months, VIP Masterclass Nov 14 included, 14-day full refund</div></div><div class="src">01 longevitylifeacademy.pages.dev, 02 shared live in the masterclass chat (/blueprint-attendees-7q4x). Prices from the live offer section, 4 Nov 2026. Screen recording; nothing submitted.</div>
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -260,7 +261,7 @@ body:hover .nav{opacity:.85}
 <div class="dot" style="left:300px;top:521px"></div><div class="dot" style="left:960px;top:521px"></div><div class="dot" style="left:1620px;top:521px"></div>
 <div style="position:absolute;left:100px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Now</div>
 <div style="position:absolute;left:760px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Nov 14</div>
-<div style="position:absolute;left:1420px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Nov 23 and 25</div>
+<div style="position:absolute;left:1420px;top:390px;width:400px;text-align:center;font:italic 400 72px var(--serif);color:var(--gold)">Nov 23, 25</div>
 <div class="card c-blue" style="left:90px;top:610px;width:420px;min-height:250px"><div class="n">THE PROMO</div><div class="t">November offer is live</div><div class="s">$79 for month one, online checkout</div></div>
 <div class="card c-teal" style="left:750px;top:610px;width:420px;min-height:250px"><div class="n">LIVE ON ZOOM</div><div class="t">Julie's VIP Masterclass</div><div class="s">12:00 PM ET, included in the course</div></div>
 <div class="card c-violet" style="left:1410px;top:610px;width:420px;min-height:250px"><div class="n">CLASSES BEGIN</div><div class="t">The November class</div><div class="s">Monday Nov 23 or Wednesday Nov 25</div></div>
@@ -283,11 +284,11 @@ $('sites').innerHTML=[lapc(120,300,1060,'v/lla_beauty.mp4','v/lla_beauty.jpg','0
 const mails0=[['iibs-leads-01','Invite',3139],['jm-a3-1','Left the checkout',2066],['jm-b1','Paid',2080],['jm-u1','Attended',2038]];
 const mails=[];$('mails').innerHTML=mails.map((m,i)=>{const w=236,h=500,ih=Math.round(m[2]*w/640);return `<div class="ph" style="left:${880+i*258}px;top:${300+(i%2)*60}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/${m[0]}.jpg" loading="lazy" style="--y:${-(ih-(h-20))}px;--d:${16+i*3}s" alt=""></div></div></div><div style="position:absolute;left:${880+i*258}px;top:${300+(i%2)*60+h+16}px;width:${w}px;text-align:center;font:400 26px var(--serif);color:#fff">${m[1]}</div>`}).join('');
 // reels
-const reels=[['r/ad26_916','Live on Zoom'],['r/ad27_916','The event'],['r/ad17_916','The VIP seat']];
+const reels=[['r/ad25_916','Masterclass card'],['r/ad26_916','Live on Zoom'],['r/ad17_916','The VIP seat']];
 $('reels').innerHTML=reels.map((r,i)=>phone(330+i*440,205,380,822,r[0]+'.mp4','',r[0]+'.jpg')).join('');
 // feed
-const feed=[['r/ad26_45','4:5','Live on Zoom',408,510],['r/ad25_11','1:1','Masterclass card',440,440],['r/w46_11','1:1','Her story, 46',440,440],['r/ad27_45','4:5','The event',408,510]];
-let fx=96+(1728-(408*2+440*2+48*3))/2;$('feed').innerHTML=feed.map(f=>{const y=330+(510-f[4])/2;const s=`<div class="tile" style="left:${fx}px;top:${y}px;width:${f[3]}px;height:${f[4]}px"><video data-src="${f[0]}.mp4" poster="${f[0]}.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="cap"><small>${f[1]}</small>${f[2]}</div></div>`;fx+=f[3]+48;return s}).join('');
+const feed=[['r/ad26_45','4:5','Live on Zoom',480,600],['r/ad25_11','1:1','Masterclass card',560,560],['r/w46_11','1:1','Her story, 46',560,560]];
+let fx=96+(1728-(480+560*2+48*2))/2;$('feed').innerHTML=feed.map(f=>{const y=300+(600-f[4])/2;const s=`<div class="tile" style="left:${fx}px;top:${y}px;width:${f[3]}px;height:${f[4]}px"><video data-src="${f[0]}.mp4" poster="${f[0]}.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="cap"><small>${f[1]}</small>${f[2]}</div></div>`;fx+=f[3]+48;return s}).join('');
 // deck slideshow
 
 // sound
