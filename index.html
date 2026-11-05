@@ -40,7 +40,7 @@ h2 em{font-style:italic;color:var(--sky)}
 .tlx .a{flex:2;background:linear-gradient(90deg,rgba(91,155,255,.55),rgba(125,229,255,.3))}.tlx .g{flex:1;background:linear-gradient(90deg,rgba(246,220,140,.55),rgba(246,220,140,.25))}
 .tlx b{font:500 22px var(--sans);letter-spacing:4px;color:#fff}.tlx span{font:400 44px/1 var(--serif);color:#fff}.tlx em{font:italic 400 26px var(--serif);color:#E8EEF8}
 .pg{position:absolute;right:92px;bottom:40px;font:400 20px var(--sans);letter-spacing:3px;color:var(--dim)}
-.src{position:absolute;left:96px;bottom:40px;font:300 17px/1.35 var(--sans);color:#6F86A8;max-width:1500px}
+
 /* Julie cards */
 .card{position:absolute;border-radius:28px;padding:44px 30px 26px;border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px rgba(0,0,0,.35)}
 .card:before{content:"";position:absolute;left:30px;right:30px;top:22px;height:8px;border-radius:8px;background:var(--bar)}
@@ -125,14 +125,21 @@ body:hover .nav{opacity:.85}
 #rev textarea{border-radius:16px!important;border:1px solid rgba(125,229,255,.25)!important;background:rgba(3,13,26,.7)!important;font:400 19px/1.5 var(--sans)!important}
 #rev label.fin{font:italic 400 26px var(--serif)!important;color:#F6DC8C!important}#rev label.fin input{accent-color:#F6DC8C}
 #rev .meta span{font:italic 400 18px var(--serif);color:#9CC8FF}
-.g3{display:none}.src{opacity:.75}
+.g3{display:none}
 
 .mch{position:absolute;left:96px;right:96px;top:200px;z-index:2}
 .mch .d{font:500 28px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--cy);margin-bottom:28px}
-.mch h2{position:static;left:auto;top:auto;font:400 58px/1.12 var(--serif);letter-spacing:-.6px;color:#fff;max-width:1720px;margin:0 0 40px}
+.mch h2{position:static;left:auto;top:auto;font:400 52px/1.18 var(--serif);letter-spacing:-.5px;color:#fff;max-width:1680px;margin:0 0 36px;white-space:normal}
 .mch h2 em{color:#9CC8FF;font-style:italic}
 .mch .sub{font:400 42px/1.35 var(--serif);color:#E8EEF7;max-width:1600px;margin:0 0 28px}
 .mch .vip{font:500 36px/1.3 var(--sans);color:#F6DC8C;max-width:1400px}
+
+.slide:not(.on) .src,.slide:not(.on) .pg{visibility:hidden!important;opacity:0!important}
+.src{position:absolute;left:96px;bottom:36px;right:280px;font:300 16px/1.3 var(--sans);color:#6F86A8;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.85;z-index:6;pointer-events:none}
+.pg{z-index:7}
+.card.ov .m{position:relative;overflow:hidden}
+.card.ov .m video,.card.ov .m img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+
 </style><div id="rev"><div class="in"><div class="k2"><b>Review</b>Company meeting deck</div><h3>Your comments, <em>slide by slide.</em></h3><p>Comments save on this device as you type. Tick Final on the slides you approve. Send my comments saves every comment and Final tick for Omri.</p>
 <div class="bar"><button class="p" id="sendbtn" onclick="sendAll()">Send my comments</button><button onclick="dlPptx(true)">Download final slides (PPTX)</button><a href="Company-Meeting-V2.pptx" download><button>Download full deck (PPTX)</button></a><button onclick="closeRev()">Back to the deck</button></div>
 <div class="row"><img src="export/s01.jpg" alt=""><div><b>Slide 1. What we built</b><textarea id="rc1" data-n="1" data-t="What we built" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv1"></span><label class="fin"><input type="checkbox" id="rf1"> Final</label></div></div></div><div class="row"><img src="export/s02.jpg" alt=""><div><b>Slide 2. Masterclass</b><textarea id="rc2" data-n="2" data-t="Masterclass" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv2"></span><label class="fin"><input type="checkbox" id="rf2"> Final</label></div></div></div><div class="row"><img src="export/s07.jpg" alt=""><div><b>Slide 3. Emails</b><textarea id="rc3" data-n="3" data-t="Emails" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv3"></span><label class="fin"><input type="checkbox" id="rf3"> Final</label></div></div></div><div class="row"><img src="export/s10.jpg" alt=""><div><b>Slide 4. November sites</b><textarea id="rc4" data-n="4" data-t="November sites" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv4"></span><label class="fin"><input type="checkbox" id="rf4"> Final</label></div></div></div><div class="row"><img src="export/s12.jpg" alt=""><div><b>Slide 5. November creatives</b><textarea id="rc5" data-n="5" data-t="November creatives" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv5"></span><label class="fin"><input type="checkbox" id="rf5"> Final</label></div></div></div><div class="row"><img src="export/s15.jpg" alt=""><div><b>Appendix 1, live on Meta</b><textarea id="rc6" data-n="6" data-t="Appendix 1, live on Meta" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv6"></span><label class="fin"><input type="checkbox" id="rf6"> Final</label></div></div></div><div class="row"><img src="export/s16.jpg" alt=""><div><b>Appendix 2, Riverside clips</b><textarea id="rc7" data-n="7" data-t="Appendix 2, Riverside clips" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv7"></span><label class="fin"><input type="checkbox" id="rf7"> Final</label></div></div></div><div class="row"><img src="export/s17.jpg" alt=""><div><b>Appendix 3, more UGC</b><textarea id="rc8" data-n="8" data-t="Appendix 3, more UGC" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv8"></span><label class="fin"><input type="checkbox" id="rf8"> Final</label></div></div></div><div class="row"><img src="export/s18.jpg" alt=""><div><b>Appendix 4, more UGC</b><textarea id="rc9" data-n="9" data-t="Appendix 4, more UGC" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv9"></span><label class="fin"><input type="checkbox" id="rf9"> Final</label></div></div></div><div class="row"><img src="export/s19.jpg" alt=""><div><b>Appendix 5, Courtney film</b><textarea id="rc10" data-n="10" data-t="Appendix 5, Courtney film" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv10"></span><label class="fin"><input type="checkbox" id="rf10"> Final</label></div></div></div><div class="row"><img src="export/s20.jpg" alt=""><div><b>Appendix 6, banners</b><textarea id="rc11" data-n="11" data-t="Appendix 6, banners" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv11"></span><label class="fin"><input type="checkbox" id="rf11"> Final</label></div></div></div><div class="row"><img src="export/s21.jpg" alt=""><div><b>Appendix 7, Julie animations</b><textarea id="rc12" data-n="12" data-t="Appendix 7, Julie animations" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv12"></span><label class="fin"><input type="checkbox" id="rf12"> Final</label></div></div></div></div></div>
@@ -150,8 +157,8 @@ body:hover .nav{opacity:.85}
 <div class="card ov c-blue" style="left:416px;top:280px;width:360px;height:680px;padding:28px 10px 12px"><div class="m"><video data-src="r/ad26_45.mp4" poster="r/ad26_45.jpg" muted loop playsinline></video><button class="snd">Sound</button></div><div class="t">$79 to start</div></div>
 <div class="card ov c-violet" style="left:792px;top:280px;width:360px;height:680px;padding:28px 10px 12px"><div class="m"><img src="img/sites5.jpg" alt=""></div><div class="t">5 web pages</div></div>
 <div class="card ov c-pink" style="left:1168px;top:280px;width:360px;height:680px;padding:28px 10px 12px"><div class="m"><img src="em/jm-u1.jpg" alt=""></div><div class="t">37 emails</div></div>
-<div class="card ov c-gold" style="left:1544px;top:280px;width:336px;height:680px;padding:28px 10px 12px"><div class="m"><video data-src="r/w46_11.mp4" poster="r/w46_11.jpg" muted loop playsinline></video><button class="snd">Sound</button></div><div class="t">22 new videos</div></div>
-<div class="src">212 paid orders and 200 unique buyers: ActiveCampaign, 16 Sep to 2 Nov, pulled 4 Nov 2026. $79 month one from longevitylifeacademy.pages.dev.</div>
+<div class="card ov c-gold" style="left:1544px;top:280px;width:336px;height:680px;padding:28px 10px 12px"><div class="m"><video data-src="r/ad17_916.mp4" poster="r/ad17_916.jpg" muted loop playsinline></video><button class="snd">Sound</button></div><div class="t">22 new videos</div></div>
+<div class="src">212 paid orders, ActiveCampaign, 16 Sep to 2 Nov. $79 month one from pages.dev.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -160,7 +167,7 @@ body:hover .nav{opacity:.85}
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="mch">
 <div class="d">Masterclass, Oct 27 and Nov 14.</div>
-<h2>Learn to age slower with the second slowest aging woman on earth, Julie Gibson Clark. Longevity Life Academy Founding Faculty.</h2>
+<h2>Learn to age slower with the second slowest aging woman on earth,<br>Julie Gibson Clark. Longevity Life Academy Founding Faculty.</h2>
 <div class="vip">90 min VIP session with live Q&amp;A.</div>
 </div>
 <div class="src">Run of Show V3. Oct 27 live, Nov 14 VIP included with the November Blueprint.</div>
@@ -171,8 +178,8 @@ body:hover .nav{opacity:.85}
 
 <h2>One page to sign up <em>for the live hour.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>01</i>Masterclass sign up site</div></div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="src">Masterclass event page. Screen recording from site-recs masterclass_event_1440, 5 Nov 2026.</div>
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>01</i>Masterclass sign up site</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="src">Masterclass sign up site. Screen recording, 5 Nov 2026.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -181,7 +188,7 @@ body:hover .nav{opacity:.85}
 <h2>Julie teaches, <em>in her own words.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div id="hooks"></div>
-<div class="src">FINAL Riverside clips with hook overlay from clips.json: Cake and Sugar. data-start 4.5 skips the shared intro.</div>
+<div class="src">FINAL Riverside clips with hook overlay: Cake and Sugar.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -189,8 +196,8 @@ body:hover .nav{opacity:.85}
 
 <h2>During the live, <em>the offer page.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip"><i>02</i>Event offer page</div></div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="src">/blueprint-attendees-7q4x, shared in the masterclass chat. Screen recording from site-recs event_attendees_1440, 5 Nov 2026.</div>
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip"><i>02</i>Event offer page</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="src">Event offer page /blueprint-attendees-7q4x. Screen recording, 5 Nov 2026.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -198,8 +205,8 @@ body:hover .nav{opacity:.85}
 
 <h2>After the live, <em>a 72 hour offer.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/masterclass72.mp4" poster="v/masterclass72.jpg" muted loop playsinline></video><div class="chip"><i>03</i>72 hour offer page</div></div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="src">72 hour offer page. Prior screen recording kept. New site-recs masterclass72_1440 not present as of 5 Nov 2026 06:54 Israel time.</div>
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/masterclass72.mp4" poster="v/masterclass72.jpg" muted loop playsinline></video><div class="chip"><i>03</i>72 hour offer page</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="src">72 hour offer page. New screen recording, 5 Nov 2026.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -238,9 +245,9 @@ body:hover .nav{opacity:.85}
 
 <h2>$79 starts the Blueprint, <em>online.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="lap" style="left:96px;top:188px;width:1260px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site, pricing and checkout</div></div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="lap" style="left:96px;top:188px;width:1260px"><div class="lid"><div class="scr"><video data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>The Blueprint site, pricing and checkout</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
 <div class="card c-blue" style="left:1396px;top:300px;width:428px;padding-top:48px"><div class="n">THE NOVEMBER OFFER</div><div class="t" style="font-size:44px">$79 for month one</div><div class="s">then $169 a month for 4 months. VIP Masterclass Nov 14 included. Full refund within 14 days of registration.</div></div>
-<div class="src">Verified on longevitylifeacademy.pages.dev offer section, 5 Nov 2026: $79 for month 1 instead of $169, then four monthly payments of $169. Screen recording from site-recs blueprint_offer_1440.</div>
+<div class="src">Offer verified on longevitylifeacademy.pages.dev, 5 Nov 2026. $79 then $169.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -248,8 +255,8 @@ body:hover .nav{opacity:.85}
 
 <h2>The academy home, <em>longevitylifeacademy.com.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/lla_beauty.mp4" poster="v/lla_beauty.jpg" muted loop playsinline></video><div class="chip"><i>02</i>longevitylifeacademy.com</div></div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="src">longevitylifeacademy.com home page. Screen recording from site-recs lla_beauty_1440, 5 Nov 2026.</div>
+<div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/lla_beauty.mp4" poster="v/lla_beauty.jpg" muted loop playsinline></video><div class="chip"><i>02</i>longevitylifeacademy.com</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="src">longevitylifeacademy.com home. Screen recording, 5 Nov 2026.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -258,7 +265,7 @@ body:hover .nav{opacity:.85}
 <h2>22 new videos, <em>made for November.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div id="reels"></div>
-<div class="src">22 final video files in lla-blueprint-nov-adjusted final/clips.json. Distinct creatives: Ad25, Ad26, Ad17. Original music: tap Sound.</div>
+<div class="src">22 final videos in clips.json. Distinct creatives Ad25, Ad26, Ad17.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -293,7 +300,7 @@ body:hover .nav{opacity:.85}
 <h2>Live on Meta now, <em>Blueprint ads.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="ph" style="left:330px;top:205px;width:380px;height:822px"><div class="scr"><div class="isl"></div><video data-src="ap/meta_ad17.mp4" poster="ap/meta_ad17.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div><div class="ph" style="left:770px;top:205px;width:380px;height:822px"><div class="scr"><div class="isl"></div><video data-src="ap/meta_ad27.mp4" poster="ap/meta_ad27.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div><div class="ph" style="left:1210px;top:205px;width:380px;height:822px"><div class="scr"><div class="isl"></div><video data-src="ap/meta_ad26.mp4" poster="ap/meta_ad26.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div>
-<div class="src">Active on Meta, 5 Nov 2026: Ad17 Piano 1m30, Ad27 event zoom 15s, Ad26 zoom blue 15s. Reels versions shown.</div>
+<div class="src">Active on Meta, 5 Nov 2026: Ad17, Ad27, Ad26. Reels shown.</div>
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><b>A</b>Appendix</div>
@@ -335,23 +342,17 @@ body:hover .nav{opacity:.85}
 <h2>Julie animations, <em>light and 3D.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="tile" style="left:550px;top:195px;width:820px;height:820px"><video data-src="ap/hero.mp4" poster="ap/hero.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:16px;bottom:16px;z-index:4">Sound</button></div>
-<div class="src">Grid of the Pace, Money, Protocol and Rank animations. Contrast raised for the screen. Not live yet.</div>
+<div class="src">Julie animation grid. Contrast raised. Not live yet.</div>
 <div class="pg"></div></section>
 <div id="sites" hidden></div><div id="mails" hidden></div><div class="nav"><button onclick="go(-1)">Back</button><button onclick="go(1)">Next</button><button onclick="openRev()">Review and download</button><button onclick="document.documentElement.requestFullscreen()">Full screen</button></div>
 <script>
 
 const $=id=>document.getElementById(id);
 const phone=(x,y,w,h,src,inner='',poster='')=>`<div class="ph" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><video data-src="${src}" ${poster?`poster="${poster}"`:''} muted loop playsinline></video>${inner}<button class="snd">Sound</button></div></div>`;
-const lap=(x,y,w,src,poster,title,sub)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video></div><button class="snd">Sound</button></div></div><div class="base"></div><div class="lab"><b>${title}</b>${sub}</div></div>`;
-// hooks
-const hooks=[['cake','Longevity is like a cake.','c-teal'],['sugar',"Sugar cravings aren't willpower.",'c-pink'],['wine','Your wine is making hot flashes worse.','c-violet'],['aging','Age 6.5 years in 10?','c-blue'],['hrv','Heart-rate variability','c-gold'],['fasting','Fasting','c-teal']];
-if($('hooks'))$('hooks').innerHTML=hooks.slice(0,2).map((h,i)=>phone(550+i*440,205,380,822,'v/'+h[0]+'.mp4','','v/'+h[0]+'.jpg').replace('<video ','<video data-start="4.5" ')).join('');
-// sites 2x2
-const lapc=(x,y,w,src,poster,n,t,sm)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video><div class="chip" ${sm?'style="font-size:19px;top:10px;left:10px;padding:7px 11px"':''}><i>${n}</i>${t}</div></div></div><div class="base"></div></div>`;
-if($('sites'))$('sites').innerHTML=[lapc(120,300,1060,'v/lla_beauty.mp4','v/lla_beauty.jpg','01','longevitylifeacademy.com'),lapc(1290,290,534,'v/masterclass.mp4','v/masterclass.jpg','02','The Masterclass site',1),lapc(1290,660,534,'v/masterclass72.mp4','v/masterclass72.jpg','03','The 72-hour offer',1)].join('');
+const lap=(x,y,w,src,poster,title,sub)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-start="4.5" data-src="${src}" poster="${poster}" muted loop playsinline></video><div class="chip" ${sm?'style="font-size:19px;top:10px;left:10px;padding:7px 11px"':''}><i>${n}</i>${t}</div><button class="snd">Sound</button></div></div><div class="base"></div></div>`;
+/* sites mosaic unused */
 // mails
-const mails0=[['iibs-leads-01','Invite',3139],['jm-a3-1','Left the checkout',2066],['jm-b1','Paid',2080],['jm-u1','Attended',2038]];
-const mails=[];if($('mails'))$('mails').innerHTML=mails.map((m,i)=>{const w=236,h=500,ih=Math.round(m[2]*w/640);return `<div class="ph" style="left:${880+i*258}px;top:${300+(i%2)*60}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/${m[0]}.jpg" loading="lazy" style="--y:${-(ih-(h-20))}px;--d:${16+i*3}s" alt=""></div></div></div><div style="position:absolute;left:${880+i*258}px;top:${300+(i%2)*60+h+16}px;width:${w}px;text-align:center;font:400 26px var(--serif);color:#fff">${m[1]}</div>`}).join('');
+/* mails mosaic unused */
 // reels
 const reels=[['r/ad25_916','Masterclass card'],['r/ad26_916','Live on Zoom'],['r/ad17_916','The VIP seat']];
 if($('reels'))$('reels').innerHTML=reels.map((r,i)=>phone(330+i*440,205,380,822,r[0]+'.mp4','',r[0]+'.jpg')).join('');
