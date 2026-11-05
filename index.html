@@ -65,7 +65,7 @@ h2 em{font-style:italic;color:var(--sky)}
 .lap .base{position:relative;height:18px;margin:0 -5.5%;border-radius:2px 2px 20px 20px;background:linear-gradient(180deg,#d9dee6 0%,#aab3c0 55%,#7d8796 100%);box-shadow:0 18px 30px rgba(0,0,0,.45)}
 .lap .base:before{content:"";position:absolute;left:50%;top:0;width:16%;height:7px;margin-left:-8%;border-radius:0 0 10px 10px;background:linear-gradient(#9aa4b2,#c3cad4)}
 .chip{position:absolute;left:14px;top:14px;z-index:3;padding:8px 14px 8px 12px;border-radius:12px;background:rgba(3,13,26,.9);box-shadow:0 0 0 1px rgba(125,229,255,.35) inset,0 10px 30px rgba(0,0,0,.4);font:400 24px/1.1 var(--serif);color:#fff;display:flex;gap:8px;align-items:center;max-width:90%}.chip i{font:500 13px var(--sans);letter-spacing:2px;color:var(--cy);font-style:normal;flex:none}
-.ph .chip{top:52px}
+.ph .chip{top:52px}.ph .chip[style*="bottom"]{top:auto !important}/* review-fix chips */.vid-contain{object-fit:contain !important;object-position:center center !important;background:#030d1a !important}
 .lab{position:absolute;left:0;right:0;font:400 22px/1.3 var(--sans);color:var(--mute);text-align:center;margin-top:22px}
 .lab b{display:block;font:400 32px/1.15 var(--serif);color:#fff;margin-bottom:4px}
 .ph{position:absolute;border-radius:46px;padding:10px;background:linear-gradient(160deg,#2a313c,#0a0d13 40%);box-shadow:0 0 0 1.5px rgba(255,255,255,.12) inset,0 40px 80px rgba(0,0,0,.6),0 0 90px rgba(125,229,255,.12)}
@@ -129,7 +129,7 @@ body:hover .nav{opacity:.85}
 .g3{display:none}
 
 .mchbar{position:absolute;left:0;right:0;top:0;height:290px;background:linear-gradient(180deg,rgba(3,13,26,.92),rgba(3,13,26,.55) 70%,rgba(3,13,26,0));z-index:2;pointer-events:none}
-.mch{position:absolute;left:96px;right:300px;top:86px;z-index:3;pointer-events:none}
+.mch{position:absolute;left:96px;right:300px;top:86px;z-index:3;pointer-events:none}.big .mch{top:78px}/* mch-clear */
 .mch .d{font:500 24px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--cy);margin-bottom:12px}
 .mch h2{position:static;left:auto;top:auto;font:400 44px/1.15 var(--serif);letter-spacing:-.5px;color:#fff;max-width:1720px;margin:0 0 12px;white-space:normal;text-shadow:0 2px 24px rgba(0,0,0,.55)}
 .mch h2 em{color:#9CC8FF;font-style:italic}
@@ -177,6 +177,7 @@ body:hover .nav{opacity:.85}
 <script>window.__h=location.hash</script></head><body><div id="stage">
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><i></i><b>00</b>Longevity Life Academy, Company meeting</div>
+
 <h2>What we built <em>in Longevity.</em></h2>
 <div class="lede">Five pieces that work as one system.</div>
 <img class="logo" src="img/logo-dark.png" alt="Longevity Life Academy by eTeacher Group">
@@ -186,58 +187,56 @@ body:hover .nav{opacity:.85}
 <div class="card ov c-pink" style="left:1168px;top:280px;width:360px;height:680px;padding:28px 10px 12px"><div class="m"><img src="em/jm-u1.jpg" alt=""></div><div class="t">37 emails</div></div>
 <div class="card ov c-gold" style="left:1544px;top:280px;width:336px;height:680px;padding:28px 10px 12px"><div class="m"><video data-src="r/ad17_916.mp4" poster="r/ad17_916.jpg" muted loop playsinline></video><button class="snd">Sound</button></div><div class="t">22 new videos</div></div>
 <div class="src">212 paid orders, ActiveCampaign, 16 Sep to 2 Nov. $79 month one from pages.dev.</div>
+
 <div class="pg"></div></section>
 <section class="slide big theme-teal"><div class="glow g1"></div><div class="glow g2"></div><div class="accent"></div>
 <div class="kick"><i></i><b>00</b>Masterclass</div>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="mchbar" style="height:115px"></div>
-<div class="mch" style="top:36px">
-<div class="d" style="font-size:24px">Masterclass, Oct 27 and Nov 14.</div>
-<h2 style="font-size:30px;line-height:1.1">Learn to age slower with the second slowest aging woman on earth,<br>Julie Gibson Clark. Longevity Life Academy Founding Faculty.</h2>
-<div class="vip" style="font-size:26px;margin-bottom:0">90 min VIP session with live Q&amp;A.</div>
+<div class="mch" style="top:78px">
+<div class="d" style="font-size:22px;margin-bottom:8px">Oct 27 and Nov 14.</div>
+<h2 style="font-size:32px;line-height:1.12;margin-bottom:8px">Learn to age slower with the second slowest aging woman on earth,<br>Julie Gibson Clark. Longevity Life Academy Founding Faculty.</h2>
+<div class="vip" style="font-size:26px;margin:0">90 min VIP session with live Q&amp;A.</div>
 </div>
-<div class="stagev" style="left:28px;top:210px;width:560px;height:300px"><video data-start="2" data-src="r/ad26_45.mp4" poster="r/ad26_45.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:12px;bottom:12px;z-index:4">Sound</button><div class="chip"><i>01</i>Live Zoom grid</div></div>
-<div class="stagev" style="left:608px;top:210px;width:560px;height:300px"><video data-src="v/julie_masterclass_film.mp4" poster="v/julie_masterclass_film.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:12px;bottom:12px;z-index:4">Sound</button><div class="chip"><i>02</i>Julie Masterclass film</div></div>
-<div class="ph" style="left:1190px;top:200px;width:340px;height:680px"><div class="scr"><div class="isl"></div><video data-src="r/man_916.mp4" poster="r/man_916.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>03</i>Man UGC</div></div></div>
-<div class="ph" style="left:1550px;top:200px;width:340px;height:680px"><div class="scr"><div class="isl"></div><video data-start="5" data-src="r/age33_slower_916.mp4" poster="r/age33_slower_916.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>04</i>Age 33% slower</div></div></div>
-<div class="lap" style="left:28px;top:535px;width:1140px"><div class="lid"><div class="scr"><video data-start="0" data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>05</i>Masterclass sign up site</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="stagev" style="left:28px;top:230px;width:560px;height:300px"><video data-start="2" data-src="r/ad26_45.mp4" poster="r/ad26_45_fullgrid.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:12px;bottom:12px;z-index:4">Sound</button><div class="chip"><i>01</i>Live Zoom grid</div></div>
+<div class="stagev" style="left:608px;top:230px;width:560px;height:300px"><video data-src="v/julie_masterclass_film.mp4" poster="v/julie_masterclass_film.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:12px;bottom:12px;z-index:4">Sound</button><div class="chip"><i>02</i>Julie Masterclass film</div></div>
+<div class="ph" style="left:1190px;top:220px;width:340px;height:680px"><div class="scr"><div class="isl"></div><video data-start="2" data-src="r/man_916.mp4" poster="r/man_916.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>03</i>Man UGC</div></div></div>
+<div class="ph" style="left:1550px;top:220px;width:340px;height:680px"><div class="scr"><div class="isl"></div><video data-start="5" data-src="r/age33_slower_916.mp4" poster="r/age33_slower_916.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>04</i>Age 33% slower</div></div></div>
+<div class="lap" style="left:28px;top:560px;width:1140px"><div class="lid"><div class="scr"><video data-start="0" data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>05</i>Masterclass sign up site</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
 <div class="src">Zoom grid, Julie Masterclass film from the website, Masterclass site, man UGC, blue age 33% slower Meta reel.</div>
 <div class="pg"></div></section>
 <section class="slide big theme-teal"><div class="glow g1"></div><div class="glow g2"></div><div class="accent"></div>
 <div class="kick"><i></i><b>00</b>Masterclass</div>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="mchbar" style="height:100px"></div>
-<div class="mch" style="top:40px">
-<div class="d" style="font-size:26px">Masterclass, Oct 27 and Nov 14.</div>
-<h2 style="font-size:40px;white-space:nowrap">Learn to age slower with Julie Gibson Clark.</h2>
+<div class="mch" style="top:78px">
+<div class="d" style="font-size:22px;margin-bottom:8px">Oct 27 and Nov 14.</div>
+<h2 style="font-size:40px;white-space:nowrap;margin:0">Learn to age slower with Julie Gibson Clark.</h2>
 </div>
-<div class="lap" style="left:40px;top:160px;width:1180px"><div class="lid"><div class="scr"><video data-start="0" data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip"><i>01</i>blueprint-attendees-7q4x</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="card c-teal" style="left:1280px;top:170px;width:580px;min-height:340px;padding:56px 36px 36px"><div class="n" style="font-size:40px;letter-spacing:4px">PAID ORDERS</div><div class="t" style="font-size:110px;line-height:1;margin-top:18px">212</div><div class="s" style="font-size:34px;margin-top:18px">16 Sep to 2 Nov.</div></div>
+<div class="lap" style="left:40px;top:175px;width:1180px"><div class="lid"><div class="scr"><video data-start="0" data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip"><i>01</i>Event Blueprint sign up site</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="card c-teal" style="left:1280px;top:175px;width:580px;min-height:340px;padding:56px 36px 36px"><div class="n" style="font-size:40px;letter-spacing:4px">PAID ORDERS</div><div class="t" style="font-size:110px;line-height:1;margin-top:18px">212</div><div class="s" style="font-size:34px;margin-top:18px">16 Sep to 2 Nov.</div></div>
 <div class="card c-gold" style="left:1280px;top:560px;width:580px;min-height:340px;padding:56px 36px 36px"><div class="n" style="font-size:40px;letter-spacing:4px">THE LIVE HOUR</div><div class="t" style="font-size:52px;line-height:1.1;margin-top:18px">60 min live + 30 min Q&amp;A</div><div class="s" style="font-size:32px;margin-top:18px">VIP session with Julie on Zoom.</div></div>
 <div class="src">Event Blueprint sign up, 212 paid orders, 60 min live + 30 min Q&amp;A.</div>
 <div class="pg"></div></section>
 <section class="slide big theme-blue"><div class="glow g1"></div><div class="glow g2"></div><div class="accent"></div>
 <div class="kick"><i></i><b>00</b>November</div>
 <img class="logo" src="img/logo-dark.png" alt="">
-<div class="mchbar" style="height:200px"></div>
-<div class="mch" style="top:40px">
-<div class="d" style="font-size:26px">November package.</div>
-<h2 style="font-size:46px;line-height:1.08">Get your tailored protocol <em>in 18 weeks.</em></h2>
-<div class="vip" style="font-size:30px;line-height:1.3;max-width:1480px;margin-bottom:0">$79 month 1, Nov promo trial. Exclusive Masterclass VIP included, Nov 14th.<br>$100 cash back towards next course.</div>
+<div class="mch" style="top:78px">
+<div class="d" style="font-size:22px;margin-bottom:8px">November package.</div>
+<h2 style="font-size:44px;line-height:1.08;margin-bottom:10px">Get your tailored protocol <em>in 18 weeks.</em></h2>
+<div class="vip" style="font-size:28px;line-height:1.3;max-width:1480px;margin:0">$79 month 1, Nov promo trial. Exclusive Masterclass VIP included, Nov 14th.<br>$100 cash back towards next course.</div>
 </div>
-<div class="lap" style="left:40px;top:275px;width:1280px"><div class="lid"><div class="scr"><video data-start="8" data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>pages.dev checkout and pricing</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="ph" style="left:1400px;top:270px;width:460px;height:720px"><div class="scr"><div class="isl"></div><video data-start="2" data-src="r/ad26_916_fill.mp4" poster="r/ad26_916_fill.jpg" muted loop playsinline style="object-fit:cover;object-position:center top"></video><button class="snd">Sound</button><div class="chip"><i>02</i>Blueprint reel Ad26</div></div></div>
+<div class="lap" style="left:40px;top:270px;width:1280px"><div class="lid"><div class="scr"><video data-start="10" data-src="v/bp_pagesdev.mp4" poster="v/bp_pagesdev.jpg" muted loop playsinline></video><div class="chip"><i>01</i>pages.dev checkout and pricing</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="ph" style="left:1400px;top:260px;width:460px;height:720px"><div class="scr" style="background:#030d1a"><div class="isl"></div><video data-start="2" data-src="r/ad26_916_fill.mp4" poster="r/ad26_916_fill.jpg" muted loop playsinline style="object-fit:cover;object-position:center top;width:100%;height:100%"></video><button class="snd">Sound</button><div class="chip"><i>02</i>Blueprint reel Ad26</div></div></div>
 <div class="src">November package, pages.dev pricing and checkout, blue Blueprint reel Ad26.</div>
 <div class="pg"></div></section>
 <section class="slide big theme-gold"><div class="glow g1"></div><div class="glow g2"></div><div class="accent"></div>
 <div class="kick"><i></i><b>00</b>November</div>
 <img class="logo" src="img/logo-dark.png" alt="">
-<h2 style="top:48px;font-size:46px">November creatives and the <em>.com homepage.</em></h2>
-<div class="lap" style="left:24px;top:145px;width:900px"><div class="lid"><div class="scr"><video data-src="v/lla_beauty.mp4" poster="v/lla_beauty.jpg" muted loop playsinline></video><div class="chip"><i>01</i>.com homepage scroll</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="ph" style="left:960px;top:145px;width:300px;height:620px"><div class="scr"><div class="isl"></div><video data-src="ap/ugc_w_33.mp4" poster="ap/ugc_w_33.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>02</i>UGC Woman 33</div></div></div>
-<div class="ph" style="left:1280px;top:145px;width:300px;height:620px"><div class="scr"><div class="isl"></div><video data-src="ap/ugc_m_dna.mp4" poster="ap/ugc_m_dna.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>03</i>UGC Man DNA</div></div></div>
-<div class="ph" style="left:1600px;top:145px;width:290px;height:400px"><div class="scr"><div class="isl"></div><video data-start="5" data-src="ap/rv_cake.mp4" poster="ap/rv_cake.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>04</i>Cake</div></div></div>
-<div class="ph" style="left:1600px;top:560px;width:290px;height:400px"><div class="scr"><div class="isl"></div><video data-start="5.5" data-src="ap/rv_sugar.mp4" poster="ap/rv_sugar.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>05</i>Sugar</div></div></div>
+<h2 style="top:70px;font-size:44px">November creatives and the <em>.com homepage.</em></h2>
+<div class="lap" style="left:24px;top:160px;width:900px"><div class="lid"><div class="scr"><video data-src="v/lla_beauty.mp4" poster="v/lla_beauty.jpg" muted loop playsinline></video><div class="chip"><i>01</i>.com homepage scroll</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="ph" style="left:960px;top:155px;width:300px;height:620px"><div class="scr"><div class="isl"></div><video data-src="ap/ugc_w_33.mp4" poster="ap/ugc_w_33.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>02</i>UGC Woman 33</div></div></div>
+<div class="ph" style="left:1280px;top:155px;width:300px;height:620px"><div class="scr"><div class="isl"></div><video data-src="ap/ugc_m_dna.mp4" poster="ap/ugc_m_dna.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>03</i>UGC Man DNA</div></div></div>
+<div class="ph" style="left:1600px;top:155px;width:290px;height:430px"><div class="scr" style="background:#030d1a"><div class="isl"></div><video data-start="5" data-src="ap/rv_cake.mp4" poster="ap/rv_cake.jpg" muted loop playsinline class="vid-contain" style="width:100%;height:100%"></video><button class="snd">Sound</button><div class="chip" style="top:auto !important;bottom:58px;left:10px"><i>04</i>Cake</div></div></div>
+<div class="ph" style="left:1600px;top:600px;width:290px;height:430px"><div class="scr" style="background:#030d1a"><div class="isl"></div><video data-start="5" data-src="ap/rv_sugar.mp4" poster="ap/rv_sugar.jpg" muted loop playsinline class="vid-contain" style="width:100%;height:100%"></video><button class="snd">Sound</button><div class="chip" style="top:auto !important;bottom:58px;left:10px"><i>05</i>Sugar</div></div></div>
 <div class="src">.com homepage scroll, two new UGCs, Julie Cake and Sugar hooks.</div>
 <div class="pg"></div></section>
 <section class="slide big theme-pink"><div class="glow g1"></div><div class="glow g2"></div><div class="accent"></div>
