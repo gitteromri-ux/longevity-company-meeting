@@ -22,8 +22,8 @@ body{position:fixed;inset:0;margin:0}#stage{position:absolute;left:0;top:0;width
 h2{position:absolute;left:92px;top:104px;font:400 96px/1.04 var(--serif);letter-spacing:-1.5px;color:#fff;text-shadow:0 0 48px rgba(125,229,255,.28);white-space:nowrap}
 h2 em{font-style:italic;color:var(--sky)}
 .lede{position:absolute;left:96px;top:222px;font:italic 400 38px/1.3 var(--serif);color:var(--ink)}
-.logo{position:absolute;right:84px;top:52px;width:228px;opacity:.95}
-.big h2{top:80px;font-size:66px;letter-spacing:-.8px}.big .kick{top:44px}
+.logo{position:absolute;right:84px;top:40px;width:200px;opacity:.95;z-index:8}
+.big h2{top:80px;font-size:66px;letter-spacing:-.8px}.big .kick{top:28px}
 .pg .dots{margin-left:14px;letter-spacing:4px;color:var(--cy)}
 .ev .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.8)}
 .ev .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,13,26,.92) 0%,rgba(3,13,26,.55) 45%,rgba(3,13,26,.25) 70%,rgba(3,13,26,.75) 100%),linear-gradient(0deg,rgba(3,13,26,.95) 0%,rgba(3,13,26,0) 40%)}
@@ -39,7 +39,7 @@ h2 em{font-style:italic;color:var(--sky)}
 .tlx .seg{border-radius:22px;padding:22px 30px;display:flex;flex-direction:column;gap:6px;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset}
 .tlx .a{flex:2;background:linear-gradient(90deg,rgba(91,155,255,.55),rgba(125,229,255,.3))}.tlx .g{flex:1;background:linear-gradient(90deg,rgba(246,220,140,.55),rgba(246,220,140,.25))}
 .tlx b{font:500 22px var(--sans);letter-spacing:4px;color:#fff}.tlx span{font:400 44px/1 var(--serif);color:#fff}.tlx em{font:italic 400 26px var(--serif);color:#E8EEF8}
-.pg{position:absolute;right:92px;bottom:40px;font:400 20px var(--sans);letter-spacing:3px;color:var(--dim)}
+.pg{position:absolute;right:84px;bottom:24px;font:400 18px var(--sans);letter-spacing:3px;color:var(--dim);z-index:7;background:linear-gradient(90deg,transparent,rgba(3,13,26,.75) 18%);padding-left:24px}
 
 /* Julie cards */
 .card{position:absolute;border-radius:28px;padding:44px 30px 26px;border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px rgba(0,0,0,.35)}
@@ -64,7 +64,7 @@ h2 em{font-style:italic;color:var(--sky)}
 .lap .scr:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.07),rgba(255,255,255,0) 38%);pointer-events:none}
 .lap .base{position:relative;height:18px;margin:0 -5.5%;border-radius:2px 2px 20px 20px;background:linear-gradient(180deg,#d9dee6 0%,#aab3c0 55%,#7d8796 100%);box-shadow:0 18px 30px rgba(0,0,0,.45)}
 .lap .base:before{content:"";position:absolute;left:50%;top:0;width:16%;height:7px;margin-left:-8%;border-radius:0 0 10px 10px;background:linear-gradient(#9aa4b2,#c3cad4)}
-.chip{position:absolute;left:16px;top:16px;z-index:3;padding:10px 16px 10px 14px;border-radius:14px;background:rgba(3,13,26,.86);box-shadow:0 0 0 1px rgba(125,229,255,.35) inset,0 10px 30px rgba(0,0,0,.4);font:400 30px/1 var(--serif);color:#fff;display:flex;gap:10px;align-items:center}.chip i{font:500 15px var(--sans);letter-spacing:3px;color:var(--cy);font-style:normal}
+.chip{position:absolute;left:14px;top:14px;z-index:3;padding:8px 14px 8px 12px;border-radius:12px;background:rgba(3,13,26,.9);box-shadow:0 0 0 1px rgba(125,229,255,.35) inset,0 10px 30px rgba(0,0,0,.4);font:400 24px/1.1 var(--serif);color:#fff;display:flex;gap:8px;align-items:center;max-width:90%}.chip i{font:500 13px var(--sans);letter-spacing:2px;color:var(--cy);font-style:normal;flex:none}
 .lab{position:absolute;left:0;right:0;font:400 22px/1.3 var(--sans);color:var(--mute);text-align:center;margin-top:22px}
 .lab b{display:block;font:400 32px/1.15 var(--serif);color:#fff;margin-bottom:4px}
 .ph{position:absolute;border-radius:46px;padding:10px;background:linear-gradient(160deg,#2a313c,#0a0d13 40%);box-shadow:0 0 0 1.5px rgba(255,255,255,.12) inset,0 40px 80px rgba(0,0,0,.6),0 0 90px rgba(125,229,255,.12)}
@@ -128,7 +128,7 @@ body:hover .nav{opacity:.85}
 .g3{display:none}
 
 .mchbar{position:absolute;left:0;right:0;top:0;height:260px;background:linear-gradient(180deg,rgba(3,13,26,.92),rgba(3,13,26,.55) 70%,rgba(3,13,26,0));z-index:2;pointer-events:none}
-.mch{position:absolute;left:96px;right:96px;top:48px;z-index:3;pointer-events:none}
+.mch{position:absolute;left:96px;right:300px;top:86px;z-index:3;pointer-events:none}
 .mch .d{font:500 24px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--cy);margin-bottom:12px}
 .mch h2{position:static;left:auto;top:auto;font:400 44px/1.15 var(--serif);letter-spacing:-.5px;color:#fff;max-width:1720px;margin:0 0 12px;white-space:normal;text-shadow:0 2px 24px rgba(0,0,0,.55)}
 .mch h2 em{color:#9CC8FF;font-style:italic}
@@ -140,7 +140,7 @@ body:hover .nav{opacity:.85}
 .scr video,.m video,.tile video,.ph video,.lap video{background:#071018}
 
 .slide:not(.on) .src,.slide:not(.on) .pg{visibility:hidden!important;opacity:0!important}
-.src{position:absolute;left:96px;bottom:36px;right:280px;font:300 16px/1.3 var(--sans);color:#6F86A8;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.85;z-index:6;pointer-events:none}
+.src{position:absolute;left:96px;bottom:24px;right:360px;font:300 16px/1.3 var(--sans);color:#6F86A8;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.9;z-index:6;pointer-events:none}
 .pg{z-index:7}
 .card.ov .m{position:relative;overflow:hidden}
 .card.ov .m video,.card.ov .m img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
@@ -167,19 +167,18 @@ body:hover .nav{opacity:.85}
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
-<div class="kick"><i></i><b>00</b>Masterclass</div>
+<div class="kick"><i></i><b>00</b></div>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="mchbar"></div>
-<div class="live" style="left:1680px;top:100px;z-index:4"><span></span>LIVE</div>
 <div class="mch">
 <div class="d">Masterclass, Oct 27 and Nov 14.</div>
 <h2>Learn to age slower with the second slowest aging woman on earth,<br>Julie Gibson Clark. Longevity Life Academy Founding Faculty.</h2>
 <div class="vip">90 min VIP session with live Q&amp;A.</div>
 </div>
-<div class="stagev" style="left:40px;top:255px;width:1840px;height:780px"><video data-src="r/ad26_45.mp4" poster="r/ad26_45.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:24px;bottom:24px;z-index:4">Sound</button><div class="chip"><i>01</i>Live with many online</div></div>
-<div class="ph" style="left:1380px;top:255px;width:460px;height:760px;z-index:5"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="v/cake.mp4" poster="v/cake.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>02</i>Julie FINAL</div></div></div>
-<div class="lap" style="left:70px;top:740px;width:500px;z-index:5"><div class="lid"><div class="scr"><video data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>03</i>Masterclass sign up site</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
-<div class="src">Live Masterclass visual, Julie FINAL hook clip, and the Masterclass sign up site.</div>
+<div class="stagev" style="left:40px;top:265px;width:1840px;height:700px"><video data-src="r/ad26_45.mp4" poster="r/ad26_45.jpg" muted loop playsinline></video><button class="snd" style="position:absolute;right:24px;bottom:24px;z-index:4">Sound</button><div class="chip"><i>01</i>The live, Oct 27</div></div>
+<div class="ph" style="left:1400px;top:280px;width:440px;height:700px;z-index:5"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="v/cake.mp4" poster="v/cake.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="chip"><i>02</i>Julie's hook clips</div></div></div>
+<div class="lap" style="left:70px;top:680px;width:460px;z-index:5"><div class="lid"><div class="scr"><video data-src="v/masterclass.mp4" poster="v/masterclass.jpg" muted loop playsinline></video><div class="chip"><i>03</i>Masterclass sign up site</div><button class="snd">Sound</button></div></div><div class="base"></div></div>
+<div class="src">The live session, Julie's hook clips, and the Masterclass sign up site.</div>
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><i></i><b>00</b>Masterclass</div>
@@ -198,7 +197,7 @@ body:hover .nav{opacity:.85}
 <div id="hooks"><div class="ph" style="left:200px;top:195px;width:420px;height:820px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="v/cake.mp4" poster="v/cake.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div>
 <div class="ph" style="left:680px;top:195px;width:420px;height:820px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="v/sugar.mp4" poster="v/sugar.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div>
 <div class="ph" style="left:1160px;top:195px;width:420px;height:820px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="v/wine.mp4" poster="v/wine.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div></div>
-<div class="src">FINAL Riverside clips with hook overlay: Cake and Sugar.</div>
+<div class="src">Riverside clips with hook overlay: Cake and Sugar.</div>
 
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -315,7 +314,7 @@ body:hover .nav{opacity:.85}
 <h2>Julie on Riverside, <em>cut with hooks.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="ph" style="left:190px;top:215px;width:340px;height:736px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="ap/rv_aging.mp4" poster="ap/rv_aging.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div><div class="ph" style="left:590px;top:215px;width:340px;height:736px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="ap/rv_cake.mp4" poster="ap/rv_cake.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div><div class="ph" style="left:990px;top:215px;width:340px;height:736px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="ap/rv_wine.mp4" poster="ap/rv_wine.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div><div class="ph" style="left:1390px;top:215px;width:340px;height:736px"><div class="scr"><div class="isl"></div><video data-start="4.5" data-src="ap/rv_sugar.mp4" poster="ap/rv_sugar.jpg" muted loop playsinline></video><button class="snd">Sound</button></div></div>
-<div class="src">FINAL clips from clips.json: Aging, Cake, Red Wine, Sugar.</div>
+<div class="src">Riverside clips from clips.json: Aging, Cake, Red Wine, Sugar.</div>
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><b>A</b>Appendix</div>
@@ -343,7 +342,7 @@ body:hover .nav{opacity:.85}
 <h2>Static banners, <em>for the feed.</em></h2>
 <img class="logo" src="img/logo-dark.png" alt="">
 <div class="tile" style="left:120px;top:260px;width:520px;height:520px"><img src="ap/ad3_courtney_1x1_1080x1080.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div><div class="tile" style="left:700px;top:260px;width:520px;height:520px"><img src="ap/ad6_julie_1x1_1080x1080.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div><div class="tile" style="left:1280px;top:260px;width:520px;height:520px"><img src="ap/ad9_julie_1x1_1440x1440.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<div class="src">FINAL banners in clips.json: Ad 3 Courtney, Ad 6 Julie, Ad 9 Julie. Not live yet.</div>
+<div class="src">Banners from clips.json: Ad 3 Courtney, Ad 6 Julie, Ad 9 Julie. Not live yet.</div>
 <div class="pg"></div></section>
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
 <div class="kick"><b>A</b>Appendix</div>
