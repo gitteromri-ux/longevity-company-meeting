@@ -133,7 +133,11 @@ body:hover .nav{opacity:.85}
 .mch h2 em{color:#9CC8FF;font-style:italic}
 .mch .sub{font:400 42px/1.35 var(--serif);color:#E8EEF7;max-width:1600px;margin:0 0 28px}
 .mch .vip{font:500 36px/1.3 var(--sans);color:#F6DC8C;max-width:1400px}
-</style><script>window.__h=location.hash</script></head><body><div id="stage">
+</style><div id="rev"><div class="in"><div class="k2"><b>Review</b>Company meeting deck</div><h3>Your comments, <em>slide by slide.</em></h3><p>Comments save on this device as you type. Tick Final on the slides you approve. Send my comments saves every comment and Final tick for Omri.</p>
+<div class="bar"><button class="p" id="sendbtn" onclick="sendAll()">Send my comments</button><button onclick="dlPptx(true)">Download final slides (PPTX)</button><a href="Company-Meeting-V2.pptx" download><button>Download full deck (PPTX)</button></a><button onclick="closeRev()">Back to the deck</button></div>
+<div class="row"><img src="export/s01.jpg" alt=""><div><b>Slide 1. What we built</b><textarea id="rc1" data-n="1" data-t="What we built" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv1"></span><label class="fin"><input type="checkbox" id="rf1"> Final</label></div></div></div><div class="row"><img src="export/s02.jpg" alt=""><div><b>Slide 2. Masterclass</b><textarea id="rc2" data-n="2" data-t="Masterclass" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv2"></span><label class="fin"><input type="checkbox" id="rf2"> Final</label></div></div></div><div class="row"><img src="export/s07.jpg" alt=""><div><b>Slide 3. Emails</b><textarea id="rc3" data-n="3" data-t="Emails" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv3"></span><label class="fin"><input type="checkbox" id="rf3"> Final</label></div></div></div><div class="row"><img src="export/s10.jpg" alt=""><div><b>Slide 4. November sites</b><textarea id="rc4" data-n="4" data-t="November sites" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv4"></span><label class="fin"><input type="checkbox" id="rf4"> Final</label></div></div></div><div class="row"><img src="export/s12.jpg" alt=""><div><b>Slide 5. November creatives</b><textarea id="rc5" data-n="5" data-t="November creatives" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv5"></span><label class="fin"><input type="checkbox" id="rf5"> Final</label></div></div></div></div></div>
+
+<script>window.__h=location.hash</script></head><body><div id="stage">
 
 <!-- 1 OVERVIEW -->
 <section class="slide big"><div class="glow g1"></div><div class="glow g2"></div>
@@ -284,7 +288,7 @@ body:hover .nav{opacity:.85}
 
 
 </div>
-<div id="sites" hidden></div><div class="nav"><button onclick="go(-1)">Back</button><button onclick="go(1)">Next</button><button onclick="openRev()">Review and download</button><button onclick="document.documentElement.requestFullscreen()">Full screen</button></div>
+<div id="sites" hidden></div><div id="mails" hidden></div><div class="nav"><button onclick="go(-1)">Back</button><button onclick="go(1)">Next</button><button onclick="openRev()">Review and download</button><button onclick="document.documentElement.requestFullscreen()">Full screen</button></div>
 <script>
 
 const $=id=>document.getElementById(id);
@@ -292,19 +296,19 @@ const phone=(x,y,w,h,src,inner='',poster='')=>`<div class="ph" style="left:${x}p
 const lap=(x,y,w,src,poster,title,sub)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>${title}</b>${sub}</div></div>`;
 // hooks
 const hooks=[['cake','Longevity is like a cake.','c-teal'],['sugar',"Sugar cravings aren't willpower.",'c-pink'],['wine','Your wine is making hot flashes worse.','c-violet'],['aging','Age 6.5 years in 10?','c-blue'],['hrv','Heart-rate variability','c-gold'],['fasting','Fasting','c-teal']];
-$('hooks').innerHTML=hooks.slice(0,2).map((h,i)=>phone(550+i*440,205,380,822,'v/'+h[0]+'.mp4','','v/'+h[0]+'.jpg').replace('<video ','<video data-start="4.5" ')).join('');
+if($('hooks'))$('hooks').innerHTML=hooks.slice(0,2).map((h,i)=>phone(550+i*440,205,380,822,'v/'+h[0]+'.mp4','','v/'+h[0]+'.jpg').replace('<video ','<video data-start="4.5" ')).join('');
 // sites 2x2
 const lapc=(x,y,w,src,poster,n,t,sm)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video><div class="chip" ${sm?'style="font-size:19px;top:10px;left:10px;padding:7px 11px"':''}><i>${n}</i>${t}</div></div></div><div class="base"></div></div>`;
-$('sites').innerHTML=[lapc(120,300,1060,'v/lla_beauty.mp4','v/lla_beauty.jpg','01','longevitylifeacademy.com'),lapc(1290,290,534,'v/masterclass.mp4','v/masterclass.jpg','02','The Masterclass site',1),lapc(1290,660,534,'v/masterclass72.mp4','v/masterclass72.jpg','03','The 72-hour offer',1)].join('');
+if($('sites'))$('sites').innerHTML=[lapc(120,300,1060,'v/lla_beauty.mp4','v/lla_beauty.jpg','01','longevitylifeacademy.com'),lapc(1290,290,534,'v/masterclass.mp4','v/masterclass.jpg','02','The Masterclass site',1),lapc(1290,660,534,'v/masterclass72.mp4','v/masterclass72.jpg','03','The 72-hour offer',1)].join('');
 // mails
 const mails0=[['iibs-leads-01','Invite',3139],['jm-a3-1','Left the checkout',2066],['jm-b1','Paid',2080],['jm-u1','Attended',2038]];
-const mails=[];$('mails').innerHTML=mails.map((m,i)=>{const w=236,h=500,ih=Math.round(m[2]*w/640);return `<div class="ph" style="left:${880+i*258}px;top:${300+(i%2)*60}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/${m[0]}.jpg" loading="lazy" style="--y:${-(ih-(h-20))}px;--d:${16+i*3}s" alt=""></div></div></div><div style="position:absolute;left:${880+i*258}px;top:${300+(i%2)*60+h+16}px;width:${w}px;text-align:center;font:400 26px var(--serif);color:#fff">${m[1]}</div>`}).join('');
+const mails=[];if($('mails'))$('mails').innerHTML=mails.map((m,i)=>{const w=236,h=500,ih=Math.round(m[2]*w/640);return `<div class="ph" style="left:${880+i*258}px;top:${300+(i%2)*60}px;width:${w}px;height:${h}px"><div class="scr"><div class="isl"></div><div class="em"><img src="em/${m[0]}.jpg" loading="lazy" style="--y:${-(ih-(h-20))}px;--d:${16+i*3}s" alt=""></div></div></div><div style="position:absolute;left:${880+i*258}px;top:${300+(i%2)*60+h+16}px;width:${w}px;text-align:center;font:400 26px var(--serif);color:#fff">${m[1]}</div>`}).join('');
 // reels
 const reels=[['r/ad25_916','Masterclass card'],['r/ad26_916','Live on Zoom'],['r/ad17_916','The VIP seat']];
-$('reels').innerHTML=reels.map((r,i)=>phone(330+i*440,205,380,822,r[0]+'.mp4','',r[0]+'.jpg')).join('');
+if($('reels'))$('reels').innerHTML=reels.map((r,i)=>phone(330+i*440,205,380,822,r[0]+'.mp4','',r[0]+'.jpg')).join('');
 // feed
 const feed=[['r/ad26_45','4:5','Live on Zoom',480,600],['r/ad25_11','1:1','Masterclass card',560,560],['r/w46_11','1:1','Her story, 46',560,560]];
-let fx=96+(1728-(480+560*2+48*2))/2;$('feed').innerHTML=feed.map(f=>{const y=300+(600-f[4])/2;const s=`<div class="tile" style="left:${fx}px;top:${y}px;width:${f[3]}px;height:${f[4]}px"><video data-src="${f[0]}.mp4" poster="${f[0]}.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="cap"><small>${f[1]}</small>${f[2]}</div></div>`;fx+=f[3]+48;return s}).join('');
+let fx=96+(1728-(480+560*2+48*2))/2;if($('feed'))$('feed').innerHTML=feed.map(f=>{const y=300+(600-f[4])/2;const s=`<div class="tile" style="left:${fx}px;top:${y}px;width:${f[3]}px;height:${f[4]}px"><video data-src="${f[0]}.mp4" poster="${f[0]}.jpg" muted loop playsinline></video><button class="snd">Sound</button><div class="cap"><small>${f[1]}</small>${f[2]}</div></div>`;fx+=f[3]+48;return s}).join('');
 // deck slideshow
 
 // sound
@@ -321,10 +325,7 @@ document.addEventListener('click',e=>{if(e.target.closest('button')||e.target.cl
 function fit(){const W=document.documentElement.clientWidth,H=document.documentElement.clientHeight,s=Math.min(W/1920,H/1080);$('stage').style.transform=`translate(${(W-1920*s)/2}px,${(H-1080*s)/2}px) scale(${s})`}addEventListener('resize',fit);fit();
 setInterval(()=>{document.querySelectorAll('.slide.on .hk').forEach(c=>{const v=c.parentNode.querySelector('video');c.classList.toggle('min',v.currentTime>3.5)})},200);
 cur=Math.max(0,Math.min(S.length-1,(parseInt(location.hash.slice(1))||1)-1));act(cur);
-</script><div id="rev"><div class="in"><div class="k2"><b>Review</b>Company meeting deck</div><h3>Your comments, <em>slide by slide.</em></h3><p>Comments save on this device as you type. Tick Final on the slides you approve. Send my comments saves every comment and Final tick for Omri.</p>
-<div class="bar"><button class="p" id="sendbtn" onclick="sendAll()">Send my comments</button><button onclick="dlPptx(true)">Download final slides (PPTX)</button><a href="Company-Meeting-V2.pptx" download><button>Download full deck (PPTX)</button></a><button onclick="closeRev()">Back to the deck</button></div>
-<div class="row"><img src="export/s01.jpg" alt=""><div><b>Slide 1. What we built</b><textarea id="rc1" data-n="1" data-t="What we built" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv1"></span><label class="fin"><input type="checkbox" id="rf1"> Final</label></div></div></div><div class="row"><img src="export/s02.jpg" alt=""><div><b>Slide 2. Masterclass</b><textarea id="rc2" data-n="2" data-t="Masterclass" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv2"></span><label class="fin"><input type="checkbox" id="rf2"> Final</label></div></div></div><div class="row"><img src="export/s07.jpg" alt=""><div><b>Slide 3. Emails</b><textarea id="rc3" data-n="3" data-t="Emails" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv3"></span><label class="fin"><input type="checkbox" id="rf3"> Final</label></div></div></div><div class="row"><img src="export/s10.jpg" alt=""><div><b>Slide 4. November sites</b><textarea id="rc4" data-n="4" data-t="November sites" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv4"></span><label class="fin"><input type="checkbox" id="rf4"> Final</label></div></div></div><div class="row"><img src="export/s12.jpg" alt=""><div><b>Slide 5. November creatives</b><textarea id="rc5" data-n="5" data-t="November creatives" placeholder="Type here. It saves as you type."></textarea><div class="meta"><span id="rv5"></span><label class="fin"><input type="checkbox" id="rf5"> Final</label></div></div></div></div></div>
-<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js" defer></script>
+</script><script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js" defer></script>
 <script>
 const RT=[...document.querySelectorAll('#rev textarea')];
 RT.forEach(t=>{const key='cm-v2-c'+t.dataset.n;t.value=localStorage.getItem(key)||'';if(t.value)document.getElementById('rv'+t.dataset.n).textContent='Saved';t.addEventListener('input',()=>{localStorage.setItem(key,t.value);document.getElementById('rv'+t.dataset.n).textContent='Saved';});});
