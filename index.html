@@ -134,7 +134,7 @@ body:hover .nav{opacity:.85}
 <h2>What we built <em>in Longevity.</em></h2>
 <div class="lede">Five pieces that work as one system.</div>
 <img class="logo" src="img/logo-dark.png" alt="Longevity Life Academy by eTeacher Group">
-<div class="card ov c-teal" style="left:96px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="v/wine.mp4" poster="v/wine.jpg" muted loop playsinline></video></div><div class="t">212 paid orders</div></div>
+<div class="card ov c-teal" style="left:96px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-start="4.5" data-src="v/wine.mp4" poster="v/wine.jpg" muted loop playsinline></video></div><div class="t">212 paid orders</div></div>
 <div class="card ov c-blue" style="left:446px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><video data-src="r/ad26_45.mp4" poster="r/ad26_45.jpg" muted loop playsinline></video></div><div class="t">$79 to start</div></div>
 <div class="card ov c-violet" style="left:796px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><img src="img/sites5.jpg" alt=""></div><div class="t">5 web pages</div></div>
 <div class="card ov c-pink" style="left:1146px;top:300px;width:326px;height:640px;padding:34px 12px 14px"><div class="m"><img src="em/jm-u1.jpg" alt=""></div><div class="t">37 emails</div></div>
@@ -168,7 +168,7 @@ body:hover .nav{opacity:.85}
 <div class="lap" style="left:270px;top:188px;width:1380px"><div class="lid"><div class="scr"><video data-src="v/event_attendees.mp4" poster="v/event_attendees.jpg" muted loop playsinline></video><div class="chip"><i>02</i>Event offer page</div></div></div><div class="base"></div></div>
 <div class="src">/blueprint-attendees-7q4x, shared in the masterclass chat. Screen recording 4 Nov 2026.</div>
 <div class="pg"></div></section>
-<section class="slide ev"><video class="bgv" data-src="v/cake.mp4" poster="v/cake.jpg" style="filter:blur(22px) brightness(.62) saturate(1.2);transform:scale(1.15)" muted loop playsinline></video><div class="shade"></div>
+<section class="slide ev"><video class="bgv" data-start="4.5" data-src="v/cake.mp4" poster="v/cake.jpg" style="filter:blur(22px) brightness(.62) saturate(1.2);transform:scale(1.15)" muted loop playsinline></video><div class="shade"></div>
 <div class="kick"><i></i><b>01</b>The live Masterclass</div>
 <div class="live"><span></span>LIVE</div>
 <img class="logo" src="img/logo-dark.png" alt="">
@@ -259,7 +259,7 @@ const phone=(x,y,w,h,src,inner='',poster='')=>`<div class="ph" style="left:${x}p
 const lap=(x,y,w,src,poster,title,sub)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video></div></div><div class="base"></div><div class="lab"><b>${title}</b>${sub}</div></div>`;
 // hooks
 const hooks=[['cake','Longevity is like a cake.','c-teal'],['sugar','Sugar cravings aren’t willpower.','c-pink'],['wine','Your wine is making hot flashes worse.','c-violet'],['aging','Age 6.5 years in 10?','c-blue'],['hrv','Heart-rate variability','c-gold'],['fasting','Fasting','c-teal']];
-$('hooks').innerHTML=hooks.slice(0,2).map((h,i)=>phone(550+i*440,205,380,822,'v/'+h[0]+'.mp4',`<div class="hk card ${h[2]}"><div class="n">0${i+1}</div><div class="t">${h[1]}</div></div>`,'v/'+h[0]+'.jpg')).join('');
+$('hooks').innerHTML=hooks.slice(0,2).map((h,i)=>phone(550+i*440,205,380,822,'v/'+h[0]+'.mp4','','v/'+h[0]+'.jpg').replace('<video ','<video data-start="4.5" ')).join('');
 // sites 2x2
 const lapc=(x,y,w,src,poster,n,t,sm)=>`<div class="lap" style="left:${x}px;top:${y}px;width:${w}px"><div class="lid"><div class="scr"><video data-src="${src}" poster="${poster}" muted loop playsinline></video><div class="chip" ${sm?'style="font-size:19px;top:10px;left:10px;padding:7px 11px"':''}><i>${n}</i>${t}</div></div></div><div class="base"></div></div>`;
 $('sites').innerHTML=[lapc(120,300,1060,'v/lla_beauty.mp4','v/lla_beauty.jpg','01','longevitylifeacademy.com'),lapc(1290,290,534,'v/masterclass.mp4','v/masterclass.jpg','02','The Masterclass site',1),lapc(1290,660,534,'v/masterclass72.mp4','v/masterclass72.jpg','03','The 72-hour offer',1)].join('');
@@ -281,7 +281,7 @@ const S=[...document.querySelectorAll('.slide')];const G=[0,1,1,2,2,2,3,3,3,4,4,
 S.forEach((x,i)=>{const g=G[i],ps=S.map((_,k)=>k).filter(k=>G[k]===g),pi=ps.indexOf(i);const p=x.querySelector('.pg');if(p)p.innerHTML=String(g+1).padStart(2,'0')+' / 05 <span class="dots">'+(ps.length>1?'step '+(pi+1)+' of '+ps.length:'')+'</span>';const kb=x.querySelector('.kick b');if(kb)kb.textContent=String(g+1).padStart(2,'0')});
 let tmr=null;function auto(){return;clearTimeout(tmr);const g=G[cur],ps=S.map((_,k)=>k).filter(k=>G[k]===g);if(ps.length<2)return;const d=S[cur].classList.contains('big')?22000:14000;tmr=setTimeout(()=>{const n=ps[(ps.indexOf(cur)+1)%ps.length];cur=n;act(cur)},d)}
 let cur=0;
-function act(i){S.forEach((s,j)=>{const on=j===i;s.classList.toggle('on',on);s.querySelectorAll('video').forEach(v=>{if(on||j===i+1){if(!v.getAttribute('src'))v.src=v.dataset.src}if(on){v.currentTime=0;v.play().catch(()=>{})}else{v.pause();v.muted=true}});if(on)s.querySelectorAll('.snd').forEach(b=>{b.classList.remove('on');b.textContent='Sound'})});history.replaceState(null,'','#'+(i+1));setTimeout(auto,0)}
+function act(i){S.forEach((s,j)=>{const on=j===i;s.classList.toggle('on',on);s.querySelectorAll('video').forEach(v=>{if(on||j===i+1){if(!v.getAttribute('src'))v.src=v.dataset.src}if(on){v.currentTime=parseFloat(v.dataset.start||0);v.play().catch(()=>{})}else{v.pause();v.muted=true}});if(on)s.querySelectorAll('.snd').forEach(b=>{b.classList.remove('on');b.textContent='Sound'})});history.replaceState(null,'','#'+(i+1));setTimeout(auto,0)}
 function go(d){cur=Math.max(0,Math.min(S.length-1,cur+d));act(cur)}
 addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('#rev'))return;if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(1)}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(-1)}});
 document.addEventListener('click',e=>{if(e.target.closest('button')||e.target.closest('#rev'))return;if(e.clientX>innerWidth*0.6)go(1);else if(e.clientX<innerWidth*0.15)go(-1)});
